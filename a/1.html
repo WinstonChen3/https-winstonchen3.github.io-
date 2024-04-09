@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Presentation</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2 style="color: black; text-align: center;"><b>3D Printers</b></h2>
+    <table id="printersTable" class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows for each printer -->
+        <tr>
+          <td>Anycubic Photon Mono M5</td>
+          <td>Rental</td>
+          <td>9.99$ Per Month</td>
+        </tr>
+        <!-- Add more rows for other printers -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- JavaScript libraries -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css"></script>
+  <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Initialize DataTable
+      $('#printersTable').DataTable();
+    });
+  </script>
+</body>
+</html>

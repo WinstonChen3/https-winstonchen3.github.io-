@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Pagination with Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    .card {
+      width: calc(100% / 10 - 20px);
+      margin: 0 10px 20px 0;
+    }
+    .card-img-top {
+      height: 100%;
+      object-fit: contain;
+    }
+    .row {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 style="color: black; text-align: center;"><b>Items</b></h2>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search..." id="searchInput">
+      <button class="btn btn-outline-secondary" type="button" onclick="searchItems()">Search</button>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Items per page:</span>
+      <input type="number" class="form-control" id="itemsPerPageInput" min="1" value="10">
+      <button class="btn btn-outline-secondary" type="button" onclick="changeItemsPerPage()">Apply</button>
+    </div>
+    <div class="row" id="cardContainer">
+      <!-- Cards will be dynamically added here based on pagination -->
+    </div>
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center" id="pagination">
+        <!-- Pagination links will be dynamically added here -->
+      </ul>
+    </nav>
+  </div>
+
+  <!-- JavaScript libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Sample data for demonstration
+    let items = [
+      { name: "Item 1", description: "Description 1", imageUrl: "/images/item1.png" },
+      { name: "Item 2", description: "Description 2", imageUrl: "/images/item2.png" },
+      { name: "Item 3", description: "Description 3", imageUrl: "/images/item3.png" },
+      { name: "Item 4", description: "Description 4", imageUrl: "/images/item4.png" },
+      { name: "Item 5", description: "Description 5", imageUrl: "/images/item5.png" },
+      { name: "Item 6", description: "Description 6", imageUrl: "/images/item6.png" },
+      { name: "Item 7", description: "Description 7", imageUrl: "/images/item7.png" },
+      { name: "Item 8", description: "Description 8", imageUrl: "/images/item8.png" },
+      { name: "Item 9", description: "Description 9", imageUrl: "/images/item9.png" },
+      { name: "Item 10", description: "Description 10", imageUrl: "/images/item10.png" },
+      // Add more items as needed
+    ];
+    // Function to perform search
+function performSearch() {
+  let searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  let filteredItems = items.filter(item => {
+    return item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm);
+  });
+  // Render the filtered items
+  renderItems(filteredItems);
+}
+
+// Function to adjust items per page
+function adjustItemsPerPage() {
+  let itemsPerPage = parseInt(document.getElementById('itemsPerPageInput').value);
+  // Render the items with the new items per page limit
+  renderItems(items.slice(0, itemsPerPage));
+}
+
+// Function to render items
+function renderItems(itemsToRender) {
+  let itemsContainer = document.getElementById('itemsContainer');
+  itemsContainer.innerHTML = ''; // Clear previous items
+
+  itemsToRender.forEach(item => {
+    let card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = `
+      <div class="card-body">
+        <h5 class="card-title">${item.name}</h5>
+        <p class="card-text">${item.description}</p>
+      </div>`;
+    itemsContainer.appendChild(card);
+  });
+}
+
+// Initial rendering with default items per page
+adjustItemsPerPage();
+    items.sort((a, b) => a.name.localeCompare(b.name));
+    let itemsPerPage = 10; // Number of items per page
+
+    // Function to render cards for the current page
+    function renderCards(pageNumber, filteredItems) {
+      const startIndex = (pageNumber - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      const currentPageItems = filteredItems.slice(startIndex, endIndex);
+
+      const cardContainer = document.getElementById("cardContainer");
+      cardContainer.innerHTML = "";
+
+      const row = document.createElement("div");
+      row.classList.add("row");
+
+      currentPageItems.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("card", "col-md-1");
+        card.innerHTML = `
+          <img src="${item.imageUrl}" class="card-img-top" alt="${item.name}">
+          <div class="card-body">
+            <h5 class="card-title">${item.name}</h5>
+            <p class="card-text">${item.description}</p> <!-- Updated description -->
+          </div>
+        `;
+        row.appendChild(card);
+      });
+
+      cardContainer.appendChild(row);
+    }
+
+    // Function to render pagination links
+    function renderPagination(totalPages) {
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = "";
+
+      for (let i = 1; i <= totalPages; i++) {
+        const pageLink = document.createElement("li");
+        pageLink.classList.add("page-item");
+        pageLink.innerHTML = `
+          <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+        `;
+        pagination.appendChild(pageLink);
+      }
+    }
+
+    // Function to change the current page
+    function changePage(pageNumber) {
+      const searchInput = document.getElementById("searchInput");
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const filteredItems = searchTerm === "" ? items : items.filter(item => item.name.toLowerCase().includes(searchTerm));
+      renderCards(pageNumber, filteredItems);
+    }
+
+    // Function to handle search
+    function searchItems() {
+      const searchInput = document.getElementById("searchInput");
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const filteredItems = searchTerm === "" ? items : items.filter(item => item.name.toLowerCase().includes(searchTerm));
+      const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+      renderPagination(totalPages);
+      renderCards(1, filteredItems); // Render initial page
+    }
+
+    // Function to change items per page
+    function changeItemsPerPage() {
+      const itemsPerPageInput = document.getElementById("itemsPerPageInput");
+      itemsPerPage = parseInt(itemsPerPageInput.value, 10);
+      searchItems(); // Re-render cards and pagination
+    }
+
+    // Initialize pagination
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    renderPagination(totalPages);
+    renderCards(1, items); // Render initial page
+  </script>
+</body>
+</html>
