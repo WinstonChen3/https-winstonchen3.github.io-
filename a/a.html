@@ -258,8 +258,8 @@
     let itemsPerPage = 10; // Default number of items per page
     let currentPage = 1; // Default current page
   
-    // Function to render cards for the current page
-    function renderCards() {
+// Function to render cards for the current page
+function renderCards() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, items.length); // Ensure endIndex doesn't exceed the total number of items
     const currentItems = items.slice(startIndex, endIndex);
@@ -272,18 +272,17 @@
         cardCol.classList.add("col-md-4", "mb-4");
 
         const card = document.createElement("div");
-        card.classList.add("card", "highlightable-card");
-        card.style.height = "25rem";
-        card.onclick = function () {
-            toggleHighlight(this);
-        };
+        card.classList.add("card", "h-100", "shadow-sm");
 
         card.innerHTML = `
-            <img src="${item.imageUrl}" class="card-img-top" alt="${item.name}" style="height: 15rem; width: 100%; object-fit: scale-down;">
+            <img src="${item.imageUrl}" class="card-img-top" alt="${item.name}" style="height: 180px; object-fit: scale-down;">
             <div class="card-body">
-              <h5 style="text-align: center;">${item.name}</h5>
-              <p class="card-text">${item.description}</p>
-              <p class="card-text centered">${item.price}</p>
+                <span class="badge bg-primary">${item.brand}</span>
+                <span class="price-hp float-end">${item.price}$</span>
+                <h5 class="card-title mt-3">${item.name}</h5>
+                <div class="text-center">
+                    <a href="#" class="btn btn-warning">Check offer</a>
+                </div>
             </div>
         `;
 
