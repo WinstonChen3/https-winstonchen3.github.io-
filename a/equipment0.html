@@ -152,6 +152,19 @@
         /* Disable color change on click */
         
     }
+    
+    .btn-warning {
+      background: none #f7810a;
+      color: #ffffff;
+      fill: #ffffff;
+      border: none;
+      text-decoration: none;
+      outline: 0;
+      box-shadow: -1px 6px 19px rgba(247, 129, 10, 0.25);
+      border-radius: 100px
+      
+    }
+  
 </style>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" role="navigation">
@@ -222,8 +235,8 @@
   <script>
     // Sample data for demonstration
     let items = [
-      { name: "Anycubic Photon Mono M5",  price:"", brand:"3D Printer",imageUrl: "/images/median 3d printer.png" },
-      { name: "Creality Ender 3 3D Printer", price:"", brand:"3D Printer",imageUrl: "/images/cheap printer.png" },
+      { name: "Anycubic Photon Printer",  price:"", brand:"3D Printer",imageUrl: "/images/median 3d printer.png" },
+      { name: "Creality Ender 3D Printer", price:"", brand:"3D Printer",imageUrl: "/images/cheap printer.png" },
       { name: "Snapmaker High Speed Printer",  price:"", brand:"3D Printer",imageUrl: "/images/expensive printer.png" },
       { name: "Flashforge Adventurer 5M Printer",  price:"", brand:"3D Printer",imageUrl: "/images/medianprinter1.png" },
       { name: "Mimaki 3DUJ-533 Printer", price:"", brand:"3D Printer",imageUrl: "/images/mimaki.png" },
@@ -250,29 +263,34 @@
 
 
 
+      { name: "1610 CNC Machine Blue", price:"", imageUrl: "/images/cheap cnc.png" },
+      { name: "AnoleX 3030-Evo Pro CNC Router", price:"", imageUrl: "/images/median cnc.png" },
+      { name: "Genmitsu CNC Router Machine", price:"", imageUrl: "/images/expensive CNC.png" },
+      { name: "EPS 5 Axis CNC Cutting Machine", price:"", imageUrl: "/images/red cnc.png" },
+      { name: "Bantam Tools CNC Machine", price:"", imageUrl: "/images/bantam.png" },
+      { name: "20W Output CNC Laser Cutter", price:"", imageUrl: "/images/20wcnc.png" },
+      { name: "Anet 4540 Desktop CNC Machine", price:"", imageUrl: "/images/cnc2.png" },
+      { name: "OpenBuilds MiniMill CNC Machine", price:"", imageUrl: "/images/cnc3.png" },
+      { name: "CNC 3018 Pro Max", price:"", imageUrl: "/images/cnc3018.png" },
+      { name: "X-CARVE Pro 4x2 CNC System", price:"", imageUrl: "/images/cnc5.png" },
+
+
+
+
       { name: "80W Soldering Iron Kit", price:"", imageUrl: "/images/cheap solder irons.png" },
-      { name: "AnoleX 3030-Evo Pro CNC Router", price:"", imageUrl: "/images/median cnc.png" },
-      { name: "Genmitsu CNC Router Machine", price:"", imageUrl: "/images/expensive CNC.png" },
-      { name: "EPS 5 Axis CNC Cutting Machine", price:"", imageUrl: "/images/red cnc.png" },
-      { name: "Bantam Tools CNC Machine", price:"", imageUrl: "/images/bantam.png" },
-      { name: "20W Output CNC Laser Cutter", price:"", imageUrl: "/images/20wcnc.png" },
-      { name: "Anet 4540 Desktop CNC Machine", price:"", imageUrl: "/images/cnc2.png" },
-      { name: "OpenBuilds MiniMill CNC Machine", price:"", imageUrl: "/images/cnc3.png" },
-      { name: "CNC 3018 Pro Max", price:"", imageUrl: "/images/cnc3018.png" },
-      { name: "X-CARVE Pro 4x2 CNC System", price:"", imageUrl: "/images/cnc5.png" },
+      { name: "Soldering Station Digital Display", price:"", imageUrl: "/images/median soldering.png" },
+      { name: "Weller Soldering Station", price:"", imageUrl: "/images/expensive soldering.png" },
+      { name: "FX888D-23BY Soldering Station", price:"", imageUrl: "/images/solder1.png" },
+      { name: "CD-1BQF Soldering Station", price:"", imageUrl: "/images/JBC.png" },
+      { name: "Cordless Soldering Iron Kit", price:"", imageUrl: "/images/cordless.png" },
+      { name: "ESD-Safe Mini Soldering System ", price:"", imageUrl: "/images/safe soldering.png" },
+      { name: "FR301-03/P Desoldering Tool", price:"", imageUrl: "/images/desoldering.png" },
+      { name: "WHA3000PS Desoldering Station", price:"", imageUrl: "/images/soldering2.png" },
+      { name: "Weller Soldering & Desoldering Set", price:"", imageUrl: "/images/de and soldering.png" },
 
 
 
-      { name: "1610 CNC Machine Blue", price:"", imageUrl: "/images/cheap solder irons.png" },
-      { name: "AnoleX 3030-Evo Pro CNC Router", price:"", imageUrl: "/images/median cnc.png" },
-      { name: "Genmitsu CNC Router Machine", price:"", imageUrl: "/images/expensive CNC.png" },
-      { name: "EPS 5 Axis CNC Cutting Machine", price:"", imageUrl: "/images/red cnc.png" },
-      { name: "Bantam Tools CNC Machine", price:"", imageUrl: "/images/bantam.png" },
-      { name: "20W Output CNC Laser Cutter", price:"", imageUrl: "/images/20wcnc.png" },
-      { name: "Anet 4540 Desktop CNC Machine", price:"", imageUrl: "/images/cnc2.png" },
-      { name: "OpenBuilds MiniMill CNC Machine", price:"", imageUrl: "/images/cnc3.png" },
-      { name: "CNC 3018 Pro Max", price:"", imageUrl: "/images/cnc3018.png" },
-      { name: "X-CARVE Pro 4x2 CNC System", price:"", imageUrl: "/images/cnc5.png" },
+     
     
     
     ];
