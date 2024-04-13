@@ -220,7 +220,6 @@
   </div>
 
   <script>
-    // Sample data for demonstration
     let items = [
       { name: "Anycubic Photon Mono M5", description: "", price:"9.99$ Per Month", imageUrl: "/images/median 3d printer.png" },
       { name: "Creality Ender 3 3D Printer", description: "",price:"9.99$ Per Month", imageUrl: "/images/cheap printer.png" },
@@ -255,13 +254,13 @@
     
     ];
   
-    let itemsPerPage = 10; // Default number of items per page
-    let currentPage = 1; // Default current page
+    let itemsPerPage = 10; 
+    let currentPage = 1; 
   
-// Function to render cards for the current page
+
 function renderCards() {
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = Math.min(startIndex + itemsPerPage, items.length); // Ensure endIndex doesn't exceed the total number of items
+    const endIndex = Math.min(startIndex + itemsPerPage, items.length);
     const currentItems = items.slice(startIndex, endIndex);
 
     const cardContainer = document.getElementById("cardContainer");
@@ -292,7 +291,7 @@ function renderCards() {
 }
 
   
-// Function to render pagination links
+
 function renderPagination() {
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const pagination = document.getElementById("pagination");
@@ -310,15 +309,14 @@ function renderPagination() {
     pagination.appendChild(pageLink);
   }
 }
-  
-    // Function to change the current page
+
     function changePage(pageNumber) {
       currentPage = pageNumber;
       renderCards();
       renderPagination();
     }
   
-    // Function to handle search
+
     function searchItems() {
       const searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
       if (searchTerm === "") {
@@ -361,20 +359,19 @@ function renderPagination() {
           item.description.toLowerCase().includes(searchTerm)
         );
       }
-      currentPage = 1; // Reset to the first page after filtering
+      currentPage = 1; 
       renderCards();
       renderPagination();
     }
   
-    // Function to change items per page
+    
     function changeItemsPerPage() {
       itemsPerPage = parseInt(document.getElementById("itemsPerPageInput").value);
-      currentPage = 1; // Reset to the first page after changing items per page
+      currentPage = 1; 
       renderCards();
       renderPagination();
     }
   
-    // Function to handle Enter key press for search
     function handleKeyPress(event) {
       if (event.key === "Enter") {
         searchItems();
@@ -386,17 +383,15 @@ function renderPagination() {
       return storedBoughtItems ? JSON.parse(storedBoughtItems) : [];
     }
   
-    // Function to store bought items in client-side storage
+
     function storeBoughtItemsInStorage(boughtItems) {
       localStorage.setItem("boughtItems", JSON.stringify(boughtItems));
     }
   
-    let boughtItems = retrieveBoughtItemsFromStorage(); // Retrieve bought items from storage
+    let boughtItems = retrieveBoughtItemsFromStorage();
   
-    // Function to handle buying an item
     function buyItem(itemName) {
-      // Here you can implement the logic for buying the item
-      // For demonstration, let's just add the bought item to the boughtItems array
+      
       const item = items.find(item => item.name === itemName);
       if (item) {
         boughtItems.push(item);
@@ -405,7 +400,6 @@ function renderPagination() {
       }
     }
   
-    // Initial rendering
     renderCards();
     renderPagination();
   </script>
