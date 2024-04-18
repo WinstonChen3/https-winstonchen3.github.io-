@@ -172,6 +172,19 @@
       
       
     }
+
+    select{
+      width: 200px;
+      height: 2.3rem;
+      padding-left: 10rem;
+      }
+
+    
+
+
+    
+
+
   
 </style>
   <body>
@@ -222,8 +235,8 @@
       </div>
       <div  class="col-md-1">
         <div class="form-group" >
-          <select id="itemsPerPageInput" class="form-control" onchange="changeItemsPerPage()">
-            <option value="5">5</option>
+          <select id="itemsPerPageInput" class="form-select form-select-lg mb-3 form-control" aria-label=".form-select-lg example" onchange="changeItemsPerPage()">
+          <option value="5">5</option>
             <option value="10" selected>10</option>
             <option value="15">15</option>
             <option value="20">20</option>
@@ -553,7 +566,7 @@ function renderPagination() {
     ];
       } else {
         items = items.filter(item =>
-          item.name.toLowerCase().includes(searchTerm) 
+          item.brand.toLowerCase().includes(searchTerm) 
           );
       }
       currentPage = 1; // Reset to the first page after filtering
