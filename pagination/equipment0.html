@@ -176,7 +176,11 @@
     select{
       width: 200px;
       height: 2.3rem;
-      padding-left: 10rem;
+      float: right;
+      }
+
+      .form-group{
+        
       }
 
     
@@ -228,14 +232,14 @@
   <br><br><br>
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div class="form-group">
           <input type="text" id="searchInput" class="form-control" placeholder="Search" oninput="searchItems()" onkeypress="handleKeyPress(event)">
         </div>
       </div>
-      <div  class="col-md-1">
-        <div class="form-group" >
-          <select id="itemsPerPageInput" class="form-select form-select-lg mb-3 form-control" aria-label=".form-select-lg example" onchange="changeItemsPerPage()">
+      <div  class="col-md-9">
+        <div class="form-group"  style="float: right;">
+          <select id="itemsPerPageInput" class="form-select form-select-sm form-control" aria-label=".form-select-lg example" onchange="changeItemsPerPage()">
           <option value="5">5</option>
             <option value="10" selected>10</option>
             <option value="15">15</option>
@@ -252,6 +256,7 @@
       <ul id="pagination" class="pagination justify-content-center mt-3"></ul>
     </nav>
   </div>
+  <br><br>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="bootstrap" viewBox="0 0 118 94">
       <title>Bootstrap</title>
