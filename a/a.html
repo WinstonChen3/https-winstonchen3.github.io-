@@ -399,7 +399,39 @@ function renderPagination() {
         alert(`You have added ${itemName} to your rentals. To complete the purchase, click proceed and go until you reach the checkout page.`);
       }
     }
+    function renderTable() {
+        const table = document.createElement("table");
+        table.id = "itemsTable";
+        table.innerHTML = `
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Brand</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${items.map(item => `
+              <tr>
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+                <td>${item.brand}</td>
+                <td><img src="${item.imageUrl}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: scale-down;"></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        `;
   
+        const cardContainer = document.getElementById("cardContainer");
+        cardContainer.innerHTML = "";
+        cardContainer.appendChild(table);
+  
+        // Initialize DataTables
+        $(document).ready(function() {
+          $('#itemsTable').DataTable();
+        });
+      }
     renderCards();
     renderPagination();
   </script>
