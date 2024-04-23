@@ -179,9 +179,6 @@
       float: right;
       }
 
-      .form-group{
-        
-      }
 
     
 
@@ -237,6 +234,9 @@
           <input type="text" id="searchInput" class="form-control" placeholder="Search" oninput="searchItems()" onkeypress="handleKeyPress(event)">
         </div>
       </div>
+      <div class="col-md-6">      
+        <button id="toggleLayoutButton" class="btn btn-primary mb-3">Toggle Layout</button>
+      </div>
       <div  class="col-md-9">
         <div class="form-group"  style="float: right;">
           <select id="itemsPerPageInput" class="form-select form-select-sm form-control" aria-label=".form-select-lg example" onchange="changeItemsPerPage()">
@@ -255,6 +255,20 @@
     <nav>
       <ul id="pagination" class="pagination justify-content-center mt-3"></ul>
     </nav>
+  </div>
+  <div class="modal fade" id="checkOfferModal" tabindex="-1" aria-labelledby="checkOfferModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkOfferModalLabel">Check Offer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Modal body content goes here -->
+                <p>This is the Check Offer modal.</p>
+            </div>
+        </div>
+    </div>
   </div>
   <br><br>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
