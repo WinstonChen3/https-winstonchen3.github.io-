@@ -10,16 +10,20 @@ body {
 /* Navigation */
 .navbar {
   background-color: #333;
-}.navbar .getstarted:hover {
+}
+
+.navbar .getstarted:hover {
   background-color: #fff; /* Background color on hover */
   color: #000; /* Text color on hover */
   border-color: #fff; /* Border color on hover, if applicable */
 }
+
 .navbar-nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 /* Dynamic hover effect for navlinks */
 .navbar .nav-link:hover::after {
   transform: scaleX(1); /* Scale effect on hover */
@@ -73,6 +77,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 /* Dynamic underline effect for navbar links */
 .nav-link {
   position: relative;
@@ -91,15 +96,36 @@ body {
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-
 .nav-link:hover::after {
   width: 100%; /* Expand the underline on hover */
   left: 0; /* Move the underline to the start of the link */
 }
 
-
 /* Limit navbar brand size */
 .navbar-brand img {
   max-width: 100px; /* Adjust the max-width as needed */
   height: auto;
+}
+
+/* Form Styles */
+.form-container {
+  width: 300px; /* Set the width and height to create a square */
+  height: 300px;
+  margin: auto; /* Center horizontally */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Form Styles */
+.form-container {
+  width: 300px; /* Set the width */
+  margin: auto; /* Center horizontally */
+}
+
+/* Separate form items into rows */
+.form-row {
+  margin-bottom: 10px; /* Adjust the vertical spacing between rows */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
 }
