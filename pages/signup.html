@@ -1,124 +1,152 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Sign Up | Techlab</title>
-  <link href="/css/login.css" rel="stylesheet">
+  <link href="/css/test.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="icon" href="../images/3.png" type="image/png">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
-  <style> 
+  <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8f9fa;
+    }
 
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
 
-    .left-align {
-    text-align: left;
-  }
-  .left-align input[type="text"],
-  .left-align input[type="email"],
-  .left-align input[type="password"] {
-    text-align: left;
-    width: 100%; /* Set the desired width for the input fields */
-  }
-  .form-group {
-    margin-bottom: 10px;
-  }
-  .form-container {
-    margin-top: 40%; /* Set the desired margin-top value for the form container */
-  }
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-  </style>
+    .card-header {
+        background-color: #333;
+        color: #fff;
+        border-bottom: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .btn-primary:hover {
+        background-color: #555;
+    }
+
+    .form-check-label {
+        color: #666;
+    }
+</style>
 </head>
 <body>
-    <main class="form-signin bg-dark align-items-center">
-        <div class="col-12 align-items-center mb-3 center-icon cont">
-            <a class='navbar-brand d-flex justify-content-center align-items-center' href='/'>
-                <img src="/images/3.png" alt="image/png">
-            </a>
-        </div>
-        <h3 class="text-white mb-0" style="text-align: center; margin-bottom: 0%;">Sign Up</h3>
-        <br>
-        <div class="container">
-            <form class='form-container mt-1' id='signup-form' method='POST' name='signup' data-netlify="false">
-                <input type='hidden' name='form-name' value='signup' />
-            
-                <!-- Dropdown menu -->
-                <div class="form-group">
-                    <label for="membershipType" class="text-white">Membership Type</label>
-                    <select class="form-select" id="membershipType" name="membershipType" onchange="checkDropdown()" required >
-                        <option value="" selected disabled>Select Membership Type</option>
-                        <option value="basic">Basic</option>
-                        <option value="premium">Pro</option>
-                        <option value="gold">Premium</option>
-                    </select>
-                </div>
-                <br><br>
-                <!-- Signup/Login Button -->
-                <button type="button" class="w-100 btn btn-lg btn-dark" id="signup-login-btn" disabled onclick="openAuthenticationModal()">Sign up / Login</button>
-                <p class="mt-3 text-white text-center"><a class='mt-3 text-white' href='/pages/membership.html'>Membership Info</a></p>
-                <p class="mt-3 text-muted text-center">&copy; 2017–2021</p>
-            </form>
-            
+
+<div class="container">
+<div class="card">
+    <div class="card-header">
+        <h3>Sign Up</h3>
+    </div>
+    <div class="card-body">
+        <form id="signup-form" method="POST" name="signup" data-netlify="true">
+            <input type="hidden" name="form-name" value="signup">
+
+            <div class="mb-3">
+                <label for="membershipType" class="form-label">Membership Type</label>
+                <select class="form-select" id="membershipType" name="membershipType" onchange="checkDropdown()" required>
+                    <option value="" selected disabled>Select Membership Type</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Pro</option>
+                    <option value="gold">Premium</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                <label class="form-check-label" for="terms">I agree to the <a href="#">terms and conditions</a></label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+</div>
+</div> 
     
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
-        // Function to open the authentication modal
-        function openAuthenticationModal() {
-            if (netlifyIdentity) {
-                netlifyIdentity.open();
-            } else {
-                console.error('Netlify Identity Widget not found.');
-            }
-        }
-    
         // Initialize Netlify Identity
         netlifyIdentity.init();
-    
-        // Function to redirect to equipment.html if the user is logged in
-        function redirectToEquipmentPage() {
-            window.location.href = 'equipment.html';
-        }
-    
-        // Listen for login events
-        netlifyIdentity.on('login', user => {
-            console.log('User logged in:', user);
-            // Redirect to equipment.html after login
-            redirectToEquipmentPage();
-        });
-    
-// Listen for login events
-netlifyIdentity.on('login', user => {
-    console.log('User logged in:', user);
-    // Enable the signup/login button
-    document.getElementById('signup-login-btn').disabled = false;
-    // Redirect to equipment.html after login
-    redirectToEquipmentPage();
-});
-    
-        // Check if user is already logged in on page load
-        netlifyIdentity.on('init', user => {
-            if(user) {
-                console.log('User is logged in:', user);
-                redirectToEquipmentPage(); // Redirect if user is logged in
-            } else {
-                console.log('User is not logged in');
-                // Perform actions for logged-out user if needed
-            }
-        });
-        // Function to check if the dropdown has a selection and enable/disable the button accordingly
-function checkDropdown() {
-    var dropdown = document.getElementById('membershipType');
-    var button = document.getElementById('signup-login-btn');
-    
-    // Check if an option is selected in the dropdown
-    if (dropdown.value !== '') {
-        button.disabled = false; // Enable the button if a selection is made
-    } else {
-        button.disabled = true; // Otherwise, disable the button
-    }
-}
 
+        // Function to handle form submission
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            var formData = new FormData(this);
+
+            // Signup user using Netlify Identity
+            netlifyIdentity.on('signup', function(user) {
+                console.log('User signed up:', user);
+                // Redirect or perform any other actions after successful signup
+            });
+
+            // Trigger Netlify Identity signup with form data
+            netlifyIdentity.open('signup');
+            netlifyIdentity.on('open', function() {
+                netlifyIdentity.on('submit', function() {
+                    netlifyIdentity.close();
+                });
+            });
+        });
+
+        // Function to check if the dropdown has a selection and enable/disable the button accordingly
+        function checkDropdown() {
+            var dropdown = document.getElementById('membershipType');
+            var button = document.querySelector('button[type="submit"]');
+
+            // Check if an option is selected in the dropdown
+            if (dropdown.value !== '') {
+                button.disabled = false; // Enable the button if a selection is made
+            } else {
+                button.disabled = true; // Otherwise, disable the button
+            }
+        }
     </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
