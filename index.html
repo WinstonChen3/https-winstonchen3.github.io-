@@ -1,239 +1,661 @@
-<!DOCTYPE html>
-<html>
+<html lang="en" >
+
 <head>
   <meta charset="UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
   <title>Techlab</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <link rel="icon" href="../images/3.png" type="image/png">
-  <link rel="stylesheet" href="/css/test.css">
 
+    <link rel="canonical" href="https://codepen.io/adethrax/pen/vEwmzO">
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.theme.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.css'>
+  
+<style>
+html,
+body {
+    height: 100%;
+}
 
-  <style>
-    p {
-        color: white;
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 85%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
     }
 
-    .social-icons {
-    text-align: center !important; /* Override existing styles */
-}
-.instagram:hover{
-    fill: #AA336A; /* Change the fill color of the SVG when hovering */
-}
-.twitter:hover{
-    fill: #00ccff; /* Change the fill color of the SVG when hovering */
-}
-.social-icons svg {
-    width: 28px !important; /* Adjust the width as needed */
-    height: 28px !important; /* Adjust the height as needed */
-    vertical-align: middle !important; /* Override existing styles */
+    header.carousel .carousel {
+        height: 50%;
+    }
 }
 
-  </style>
+
+.sectiona { 
+  background: url(http://coolblackppt.com/wp-content/uploads/2013/08/Abstract-dark-textures-floral-floral-texture-fresh-new-hd-wallpaper.jpg);
+  width: 100%;
+  background-attachment: fixed;
+}
+
+
+.sectionb { background: #d0d0d0;    width: 100%;}
+
+
+.facontainer {
+  width: auto;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+ .facontainer a {color: #000;
+  -webkit-transition: all 0.2s ease; /* Safari compatibility */
+	transition: all 0.2s ease; /* not recognised in IE9 and below */}
+.facontainer a:hover {color: #87d0b0;
+  	-webkit-transition: all 0.2s ease; /* Safari compatibility */
+	transition: all 0.2s ease; /* not recognised in IE9 and below */}
+
+.facontainer h2 {
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 26px;
+    line-height: 60px;
+    font-size: 56px;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    color: #000;
+   font-family: "Roboto",sans-serif;
+}
+
+.facontainer p {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    width: 80%;
+    margin: 20px auto;
+    line-height: 24px;
+   font: 14px/24px "Roboto",sans-serif;
+}
+
+.facontainer i {
+    background: #45906F;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+}
+
+.facontainer li {
+  color: #000;
+  display: inline-block;
+  font-size: 60px;
+}
+
+.facontainer li:hover { 
+  color: #006237;
+}
+
+
+#owl-demo {background:#fff;}
+
+    #owl-demo .item{
+    display: block;
+    padding: 54px 0px;
+    margin: 5px;
+    color: #000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    }
+    #owl-demo .left{
+    text-align: left;
+    margin-bottom: 10px;
+    }
+    #owl-demo .left .btn {
+    display: block;
+    }
+#owl-demo h2 {
+font: 600 24px/28px "Open Sans",sans-serif;
+color: #99BF38;
+}
+
+#owl-demo p {
+  font: italic 300 24px/28px "Open Sans",sans-serif;
+  color: #2B3A42;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"><img src="../images/3.png" alt="Logo" style="max-height: 40px;"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../pages/events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipments</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../clone/servicesclone.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../pages/locations.html">Locations</a>
-              </li>
-            </ul>
-            <a class="getstarted btn btn-outline-light me-2" href="/pages/signup.html" role="button">Get Started</a>
-          </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Logo Here </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-item.html">Single Portfolio Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="blog-home-1.html">Blog Home 1</a>
+                            </li>
+                            <li>
+                                <a href="blog-home-2.html">Blog Home 2</a>
+                            </li>
+                            <li>
+                                <a href="blog-post.html">Blog Post</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="full-width.html">Full Width Page</a>
+                            </li>
+                            <li>
+                                <a href="sidebar.html">Sidebar Page</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="404.html">404</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html">Pricing Table</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-      </nav>
+        <!-- /.container -->
+    </nav>
 
-  <main>
+    <!-- Header Carousel -->
 
-    <section class="about-techlab animate">
-      <div class="container">
-          <h2>About Techlab</h2>
-          <div class="row">
-              <div class="col-md-6">
-                  <img src="/images/coding.jpg" alt="About Techlab" class="img-fluid slide-in-left">
-              </div>
-              <div class="col-md-6 slide-in-right" >
-                  <p>Techlab is a leading organization providing cutting-edge equipment rental and services across the globe. With a network of locations worldwide, we empower individuals, businesses, and innovators to bring their ideas to life.</p>
-                  <p>At Techlab, we offer a wide range of high-quality equipment for various industries, along with expert services to support your projects and ventures. Our inventory includes state-of-the-art cameras, drones, 3D printers, virtual reality headsets, and more.</p>
-                  <p>Our rental process is simple and hassle-free. Browse our inventory, select the equipment you need, and choose your rental period. We offer flexible options to fit your schedule and budget.</p>
-                  <p>With Techlab, you can access the latest technology without the upfront cost of ownership. Plus, our team of experts is available to provide support and guidance throughout your project.</p>
-              </div>
-          </div>
-      </div>
-  </section>
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-  <section class="equipment-rental animate">
-    <div class="container">
-        <h2>Equipment Rental</h2>
-        <div class="row">
-            <div class="col-md-6 slide-in-left">
-                <p>Explore our extensive collection of state-of-the-art equipment available for rental. Whether you're a filmmaker, a researcher, or a hobbyist, we have the tools you need to bring your vision to life. From cameras and drones to 3D printers and virtual reality headsets, we've got you covered.</p>
-                <p>Our rental process is simple and hassle-free. Just browse our inventory, select the equipment you need, and choose your rental period. We offer flexible rental options to suit your schedule and budget.</p>
-                <p>With Techlab, you can access the latest technology without breaking the bank. Renting equipment allows you to experiment, innovate, and create without the upfront cost of ownership. Plus, our team of experts is always available to provide support and guidance along the way.</p>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="carousel-caption">
+                    <h2>Text Will Be Displayed Here</h2>
+                </div>
             </div>
-            <div class="col-md-6 slide-in-right">
-                <img src="/images/coding.jpg" alt="Equipment Rental" class="img-fluid">
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="carousel-caption">
+                    <h2>Text Will Be Displayed Here</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="carousel-caption">
+                    <h2>Text Will Be Displayed Here</h2>
+                </div>
             </div>
         </div>
-    </div>
-</section>
 
-<section class="services animate">
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+
+    <!-- Page Content -->
     <div class="container">
-        <h2>Services</h2>
+
+        <!-- Marketing Icons Section -->
         <div class="row">
-            <div class="col-md-6 slide-in-left">
-                <img src="/images/coding.jpg" alt="Services" class="img-fluid">
+           <section class="wow fadeInRight" data-wow-delay="0.5s">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Welcome to Modern Business
+                </h1>
             </div>
-            <div class="col-md-6 slide-in-right">
-                <p>In addition to equipment rental, Techlab offers a range of services to help you succeed. Whether you need technical support, training, or custom solutions, our team is here to assist you every step of the way.</p>
+          </section>
+          
+            <div class="col-md-4">
+               <section class="wow fadeInDown" data-wow-delay="0.5s" >
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><svg xmlns="http://www.w3.org/2000/svg" width="14.5" height="14.5" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+                          </svg> About Techlab</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Techlab is a beacon of innovation, bridging the gap between ideas and reality with our cutting-edge equipment rental and expert 
+                            services available on a global scale. Our diverse inventory of state-of-the-art cameras, drones, 3D printers, virtual reality 
+                            headsets, and more empowers individuals, businesses, and visionaries to elevate their projects and ventures to new heights. 
+                            With a network of locations around the world, Techlab is the go-to destination for those looking to bring their ideas to life.</p>
+              <a href="index 2.html" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+              </section>
+            </div>
+          
+            <div class="col-md-4">
+              <section class="wow fadeInDown" data-wow-delay="0.5s">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-hammer" viewBox="0 0 16 16">
+                            <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5 5 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334"/>
+                          </svg> Equipment Rental</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Explore our extensive collection of state-of-the-art equipment available for rental. Whether you're a filmmaker, a researcher, or a hobbyist, we have the tools you need to bring your vision to life.</p>
+                <p>Our rental process is simple and hassle-free. Just browse our inventory, select the equipment you need, and choose your rental period. We offer a easy rental system to suit your schedule and budget.</p>
+                <p>With Techlab, you can access the latest equipment allowing you to experiment, innovate, and create without the upfront cost of ownership. Plus, our team of experts is always available to provide support.</p>
+            <a href="/pagination/equipment0.html" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+              </section>
+            </div>
+            
+          
+          
+            <div class="col-md-4">
+              <section class="wow fadeInDown" data-wow-delay="0.5s">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                          </svg>  Services</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>In addition to equipment rental, Techlab offers a range of services to help you succeed. Whether you need technical support, training, or custom solutions, our team is here to assist you every step of the way.</p>
                 <p>We understand that every project is unique, which is why we tailor our services to meet your specific needs. From equipment setup and calibration to troubleshooting and maintenance, we've got you covered.</p>
-                <p>At Techlab, we're committed to your success. Our goal is to provide you with the tools and support you need to bring your ideas to life. Let us help you unleash your creativity and achieve your goals.</p>
+                <p>At Techlab, we're committed to your success. Our goal is to provide you with the tools and support you need to bring your ideas to life.</p>
+             <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
             </div>
+              
+           </section>
         </div>
-    </div>
-</section>
+        <!-- /.row -->
 
-</main>       
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="bootstrap" viewBox="0 0 118 94">
-    <title>Bootstrap</title>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
-  </symbol>
-  <symbol id="facebook" viewBox="0 0 16 16">
-    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-  </symbol>
-  <symbol id="instagram" viewBox="0 0 16 16">
-      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-  </symbol>
-  <symbol id="twitter" viewBox="0 0 16 16">
-    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-  </symbol>
-</svg>
+       
 
-<footer class="site-footer">
-    <div class="container">
+        <!-- Features Section -->
         <div class="row">
-            <div class="col-sm-12 col-md-4">
-                <h6>About</h6>
-                <p class="text-justify">Techlab is dedicated to simplifying solutions for programmers. We provide efficient code snippets and resources to help programmers enhance their skills in various programming languages, including C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL, and Algorithm.</p>
+            <div class="col-lg-12">
+                <section class="wow fadeInRight" data-wow-delay="0.5s">
+                    <h2 class="page-header">Modern Business Features</h2>
+                </section>
             </div>
-  
-            <div class="col-xs-6 col-md-4">
-                <h6>Privacy Policy</h6>
-                <ul class="footer-links">
-                    <li><a style="color: white;" href="http://techlab.com/privacy-policy/">Privacy Policy</a></li>
-                    <li><a style="color: white;" href="http://techlab.com/terms-of-service/">Terms of Service</a></li>
-                    <li><a style="color: white;" href="http://techlab.com/cookie-policy/">Cookie Policy</a></li>
+            <div class="col-md-6">
+            <section class="wow fadeInDown" data-wow-delay="0.5s">
+                <p>The Modern Business template by Start Bootstrap includes:</p>
+                <ul>
+                    <li><strong>Bootstrap v3.2.0</strong>
+                    </li>
+                    <li>jQuery v1.11.0</li>
+                    <li>Font Awesome v4.1.0</li>
+                    <li>Working PHP contact form with validation</li>
+                    <li>Unstyled page elements for easy customization</li>
+                    <li>17 HTML pages</li>
                 </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+             </section>   
             </div>
-  
-            <div class="col-xs-6 col-md-4">
-                <h6>Quick Links</h6>
-                <ul class="footer-links">
-                    <li><a style="color: white;" href="/pages/events.html">Events</a></li>
-                    <li><a style="color: white;" href="/pages/equipment.html">Equipment</a></li>
-                    <li><a style="color: white;" href="/pages/services.html">Services</a></li>
-                    <li><a style="color: white;" href="/pages/locations.html">Locations</a></li>
-                </ul>
+            <div class="col-md-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <img class="img-responsive" src="Makerspace-B-LE21-V3-1080sml_File-1024x576.jpg" alt="">
+                </section>
             </div>
         </div>
+        <!-- /.row -->
+
         <hr>
-    </div>
-    <div class="container">
+        
+        
         <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
-                    <a style="color: white;" href="#">Techlab</a>.
-                </p>
+            <div class="col-lg-12">
+                <section class="wow fadeInRight" data-wow-delay="0.5s">
+                    <h2 class="page-header">Modern Business Features</h2>
+                </section>
             </div>
-  
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <ul class="social-icons">
-                    <li><a class="social-icons facebook" href="#"><svg><use xlink:href="#facebook"></use></svg></a></li>
-                    <li><a class="social-icons twitter" href="#"><svg><use xlink:href="#twitter"></use></svg></a></li>
-                    <li><a class="social-icons instagram" href="#"><svg><use xlink:href="#instagram"></use></svg></a></li>
-                    <!-- Add more social icons here using the same pattern -->
-                </ul>
+            <div class="col-md-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+                </section> 
+            </div>
+            <div class="col-md-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <p>The Modern Business template by Start Bootstrap includes:</p>
+                    <ul>
+                        <li><strong>Bootstrap v3.2.0</strong>
+                        </li>
+                        <li>jQuery v1.11.0</li>
+                        <li>Font Awesome v4.1.0</li>
+                        <li>Working PHP contact form with validation</li>
+                        <li>Unstyled page elements for easy customization</li>
+                        <li>17 HTML pages</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+                 </section>  
             </div>
         </div>
+
+        
+        <hr>
+        
+        
+        
+        <!-- Call to Action Section -->
+        <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
     </div>
-  </footer>
+    <!-- /.container -->
+  
+  <div class="sectiona">
+         <!-- Portfolio Section -->
+        
+      
+    
+    
+
+<div id="owl-demo" class="owl-carousel owl-theme">
+  <div class="item"><h2>Association of Equipment Manufacturers</h2><p>"Amazing equipment and customer service."</p>
+  </div>
+    <div class="item"><h2>Education of Minded Brains</h2><p>"Your gateway to innovation and excellence. Elevate your projects with our unparalleled equipment and support services."</p>
+  </div>
+    <div class="item"><h2>Cybersecurity Cooperation</h2><p>"This techlab is the key to unlocking a brighter, more secure future."</p>
+  </div>
+</div>
 
 
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    <div class="sectionb">
+      <div class="container"><link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
-<script>
-$(document).ready(function() {
-    function isElementInViewport(elem) {
-        var bounding = elem.getBoundingClientRect();
-        return (
-            bounding.top >= 0 &&
-            bounding.left >= 0 &&
-            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+<div class="facontainer">
+   <section class="wow fadeInDown" data-wow-delay="0.2s"><h2>Get in touch</h2></section>
+  <section class="wow fadeInDown" data-wow-delay="0.2s">
+  <p>Sed ut perspiciatis unde omnis is natus error sit voluptantium doloremqtium, totam rem aperiam, eaque ipsa quae abtore veritatis et quasi architecto beatae vitae dicta.</p></section>
+  
+<li class="wow fadeInDown" data-wow-delay="0.6s"><a href="">
+  <i class="bd-ra fa fa-google-plus"></i></a>
+  </li> 
+<li class="wow fadeInDown" data-wow-delay="0.8s"><a href="">
+  <i class="bd-ra fa fa-twitter"></i></a>
+  </li>
+ <li class="wow fadeInDown" data-wow-delay="1s"><a href="">
+   <i class="fa fa-facebook"></i></a>
+  </li>
+     <li class="wow fadeInDown" data-wow-delay="1.2s"><a href="">
+       <i class="bd-ra fa fa-pinterest"></i></a>
+  </li>
+     <li class="wow fadeInDown" data-wow-delay="1.4s"><a href="">
+       <i class="bd-ra fa fa-linkedin"></i></a>
+  </li>
+</div></div>
+    </div>   
+    
+        <!-- /.row -->
+  </div>
 
-    function isAnyPartOfElementInViewport(elem) {
-        var bounding = elem.getBoundingClientRect();
-        return (
-            bounding.top < (window.innerHeight || document.documentElement.clientHeight) &&
-            bounding.bottom > 0 &&
-            bounding.left < (window.innerWidth || document.documentElement.clientWidth) &&
-            bounding.right > 0
-        );
-    }
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-    function animateOnScroll() {
-        $(".animate").each(function() {
-            if (isAnyPartOfElementInViewport(this)) {
-                $(this).addClass("in-view");
-            } else {
-                $(this).removeClass("in-view");
-            }
-        });
-    }
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-    animateOnScroll();
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
 
-    $(window).on("scroll", function() {
-        animateOnScroll();
-    });
-});
-
-</script>
-  <script type="text/javascript">
-  window._mfq = window._mfq || [];
-  (function() {
-    var mf = document.createElement("script");
-    mf.type = "text/javascript"; mf.defer = true;
-    mf.src = "//cdn.mouseflow.com/projects/51c575ee-9c07-495d-8be3-72209fbbbb16.js";
-    document.getElementsByTagName("head")[0].appendChild(mf);
-  })();
-</script>
 </body>
+
 </html>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.0/wow.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.js'></script>
+      <script id="rendered-js" >
+new WOW().init();
+
+
+
+
+
+$(document).ready(function () {
+
+  $("#owl-demo").owlCarousel({
+
+    autoPlay: 3000, //Set AutoPlay to 3 seconds
+    navigation: true, // Show next and prev buttons
+    slideSpeed: 300,
+    paginationSpeed: 400,
+    singleItem: true
+
+    // "singleItem:true" is a shortcut for:
+    // items : 1,
+    // itemsDesktop : false,
+    // itemsDesktopSmall : false,
+    // itemsTablet: false,
+    // itemsMobile : false
+  });
+
+
+});
+//# sourceURL=pen.js
+    </script>
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</body>
+
+</html>
+
