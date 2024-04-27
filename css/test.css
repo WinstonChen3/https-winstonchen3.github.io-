@@ -169,3 +169,6 @@ footer {
   display: flex; /* Use flexbox */
   justify-content: center; /* Center horizontally */
 }
+.selected {
+  border: 2px solid yellow;
+}
