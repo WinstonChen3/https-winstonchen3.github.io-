@@ -467,9 +467,10 @@ function renderPagination() {
 
       } else {
         items = items.filter(item =>
-          item.name.toLowerCase().includes(searchTerm) ||
-          item.description.toLowerCase().includes(searchTerm)
-        );
+    item.name.toLowerCase().includes(searchTerm) ||
+    item.brand.toLowerCase().includes(searchTerm)
+);
+
       }
       currentPage = 1; 
       renderCards();
