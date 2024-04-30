@@ -120,7 +120,7 @@ footer {
 
 /* Dynamic underline effect for navbar links */
 .nav-link {
-  position: relative;
+  position: none;
   color: #333; /* Change text color */
   text-decoration: none; /* Remove default underline */
 }
