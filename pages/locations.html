@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="../css/test.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="icon" href="../images/3.png" type="image/png"> 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <title>Events | Techlab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
+    <script src="
+https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js
+"></script><link href="
+https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css
+" rel="stylesheet">
 
-    <link rel="stylesheet"href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
-<style>
-    .container > :not(footer, header){
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-</style>
+    <style>
+        .container > :not(footer, header){
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#toc">
 <header>
@@ -49,137 +55,132 @@
       </nav>
 </header>
 
-  <div class="container m-4">
-    <h1 class="text-center">Locations and FAQ</h1>
+<div class="container m-4 mx-auto">
+    <h1 class="text-center wow fadeInDown" data-wow-delay="0.5s">Locations and FAQ</h1>
     <!-- Locations Accordion -->
-    
-
-        <!-- Location 1: Communityville, USA -->
-        
-            <h2 style="float: left;" class="accordion-header" id="communityvilleHeading">
-                Communityville, USA
-            </h2>
-            <br><br>
-            <iframe style="float: right;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6779588.885020612!2d-94.7090979!3d33.9322245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd1547cd0b0ea5%3A0xa4446af41cef5522!2sK-Ville%20Community%20Center!5e0!3m2!1sen!2sus!4v1713203964979!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p><strong>Hours of Operation:</strong></p>
-                    <ul>
-                        <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
-                        <li>Saturday: 10:00 AM - 6:00 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                    <p><strong>Location:</strong><br>
-                        123 Makers Street<br>
-                        Communityville, MA 01234<br>
-                        United States
-                    </p>
-                    <p><strong>Contact Information:</strong><br>
-                        Phone: (555) 123-4567<br>
-                        Email: info@makerspacecommunityville.com
-                    </p>
-                
-        <br>
-        <!-- Location 2: Innovation City, Europe -->
-        
-            <h2 style="float: left;" class="accordion-header" id="innovationCityHeading">
-              Innovation City, Europe
-            </h2>
-            <br><br>
-                <iframe style="float: right;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.534480004084!2d6.920416899999999!3d51.521755999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8ebb455555555%3A0xa5b56b801e5b5dab!2sInnovation%20City%20Management%20GmbH!5e0!3m2!1sen!2sus!4v1713204021508!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p><strong>Hours of Operation:</strong></p>
-                    <ul>
-                        <li>Monday - Friday: 10:00 AM - 7:00 PM</li>
-                        <li>Saturday: 11:00 AM - 5:00 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                    <p><strong>Location:</strong><br>
-                        456 Innovators Avenue<br>
-                        Innovation City, 56789<br>
-                        Europe
-                    </p>
-                    <p><strong>Contact Information:</strong><br>
-                        Phone: +44 1234 567890<br>
-                        Email: info@makerspaceinnovationcity.com
-                    </p>
-              
-        <br>
-        <!-- Location 3: Tech Hub, Asia -->
-        <div>
-            <h2 style="float: left;" class="accordion-header" id="techHubHeading">
-              Tech Hub, Asia
-            </h2>
-            <br><br>
-            <iframe style="float: right;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.7171095188187!2d121.5750885!3d25.0775756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442adeaec592ecd%3A0x7ebef3a8fbcad7a0!2zdC5IdWLigJTlhafnp5HlibXmlrDogrLmiJDln7rlnLA!5e0!3m2!1sen!2sus!4v1713204060378!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p><strong>Hours of Operation:</strong></p>
-                    <ul>
-                        <li>Monday - Friday: 8:00 AM - 9:00 PM</li>
-                        <li>Saturday: 9:00 AM - 4:00 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                    <p><strong>Location:</strong><br>
-                        789 Tech Boulevard<br>
-                        Tech Hub, 98765<br>
-                        Asia
-                    </p>
-                    <p><strong>Contact Information:</strong><br>
-                        Phone: +86 123 4567 8901<br>
-                        Email: info@makerspacetechhub.com
-                    </p>
+    <!-- Location 1: Communityville, USA -->
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+        <h2 style="float: left;" class="accordion-header" id="communityvilleHeading">
+            Communityville, USA
+        </h2>
+        <br><br>
+        <iframe id="iframe1" style="float: right; display: none;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6779588.885020612!2d-94.7090979!3d33.9322245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd1547cd0b0ea5%3A0xa4446af41cef5522!2sK-Ville%20Community%20Center!5e0!3m2!1sen!2sus!4v1713203964979!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><strong>Hours of Operation:</strong></p>
+                <ul>
+                    <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
+                    <li>Saturday: 10:00 AM - 6:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+                <p><strong>Location:</strong><br>
+                    123 Makers Street<br>
+                    Communityville, MA 01234<br>
+                    United States
+                </p>
+                <p><strong>Contact Information:</strong><br>
+                    Phone: (555) 123-4567<br>
+                    Email: info@makerspacecommunityville.com
+                </p>
             
-        <br>
-        <!-- Location 4: Creative Corner, South America -->
-        
-            <h2 style="float: left;" class="accordion-header" id="creativeCornerHeading">
-              Creative Corner, South America
-            </h2>
-            <br><br>
-            <iframe style="float: right;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7989856.334511945!2d-59.9076114!3d12.091806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c4089f1153f12e7%3A0xb01601e4bbc0255f!2sD&#39;s%20Creative%20Corner!5e0!3m2!1sen!2sus!4v1713204092685!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p><strong>Hours of Operation:</strong></p>
-                    <ul>
-                        <li>Monday - Friday: 9:00 AM - 7:00 PM</li>
-                        <li>Saturday: 10:00 AM - 5:00 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                    <p><strong>Location:</strong><br>
-                        234 Artistic Avenue<br>
-                        Creative Corner, SA 56789<br>
-                        South America
-                    </p>
-                    <p><strong>Contact Information:</strong><br>
-                        Phone: +55 9876 5432<br>
-                        Email: info@makerspacecreativecorner.com
-                    </p>
-                
-        <br>
-        <!-- Location 5: Tech Oasis, Africa -->
-        
-            <h2 style="float: left;" class="accordion-header" id="techOasisHeading">
-              Tech Oasis, Africa
-            </h2>
-            <br><br>
-            <iframe style="float: right;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.978825580289!2d28.1882409!3d-25.8701743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9565be793135cd%3A0xd933c87b9fa4a327!2sTech%20Oasis%20Systems!5e0!3m2!1sen!2sus!4v1713204125810!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p><strong>Hours of Operation:</strong></p>
-                    <ul>
-                        <li>Monday - Friday: 8:00 AM - 8:00 PM</li>
-                        <li>Saturday: 11:00 AM - 6:00 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                    <p><strong>Location:</strong><br>
-                        789 Innovation Street<br>
-                        Tech Oasis, AF 12345<br>
-                        Africa
-                    </p>
-                    <p><strong>Contact Information:</strong><br>
-                        Phone: +27 123 4567 890<br>
-                        Email: info@makerspacetechoasis.com
-                    </p>
     <br>
-
-    <h2 style="float: left;" class="accordion-header" id="techOasisHeading">
+    <!-- Location 2: Innovation City, Europe -->
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+        <h2 style="float: left;" class="accordion-header" id="innovationCityHeading">
+            Innovation City, Europe
+        </h2>
+        <br><br>
+        <iframe id="iframe2" style="float: right; display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.534480004084!2d6.920416899999999!3d51.521755999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8ebb455555555%3A0xa5b56b801e5b5dab!2sInnovation%20City%20Management%20GmbH!5e0!3m2!1sen!2sus!4v1713204021508!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><strong>Hours of Operation:</strong></p>
+                <ul>
+                    <li>Monday - Friday: 10:00 AM - 7:00 PM</li>
+                    <li>Saturday: 11:00 AM - 5:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+                <p><strong>Location:</strong><br>
+                    456 Innovators Avenue<br>
+                    Innovation City, 56789<br>
+                    Europe
+                </p>
+                <p><strong>Contact Information:</strong><br>
+                    Phone: +44 1234 567890<br>
+                    Email: info@makerspaceinnovationcity.com
+                </p>
+          
+    <br>
+    <!-- Location 3: Tech Hub, Asia -->
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+        Tech Hub, Asia
+    </h2>
+    <br><br>
+    <iframe id="iframe3" style="float: right; display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.7171095188187!2d121.5750885!3d25.0775756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442adeaec592ecd%3A0x7ebef3a8fbcad7a0!2zdC5IdWLigJTlhafnp5HlibXmlrDogrLmiJDln7rlnLA!5e0!3m2!1sen!2sus!4v1713204060378!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p><strong>Hours of Operation:</strong></p>
+            <ul>
+                <li>Monday - Friday: 8:00 AM - 9:00 PM</li>
+                <li>Saturday: 9:00 AM - 4:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+            <p><strong>Location:</strong><br>
+                789 Tech Boulevard<br>
+                Tech Hub, 98765<br>
+                Asia
+            </p>
+            <p><strong>Contact Information:</strong><br>
+                Phone: +86 123 4567 8901<br>
+                Email: info@makerspacetechhub.com
+            </p>
+    
+<br>
+    <!-- Location 4: Creative Corner, South America -->
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+        Creative Corner, South America
+    </h2>
+    <br><br>
+    <iframe id="iframe4" style="float: right; display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15905.350215782157!2d-58.4609445!3d-34.546645149999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3e4d6f5b21%3A0x6536c311e05116e5!2sCreative%20Corner!5e0!3m2!1sen!2sus!4v1713204088190!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p><strong>Hours of Operation:</strong></p>
+            <ul>
+                <li>Monday - Friday: 9:00 AM - 7:00 PM</li>
+                <li>Saturday: 10:00 AM - 5:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+            <p><strong>Location:</strong><br>
+                234 Artistic Avenue<br>
+                Creative Corner, SA 56789<br>
+                South America
+            </p>
+            <p><strong>Contact Information:</strong><br>
+                Phone: +55 9876 5432<br>
+                Email: info@makerspacecreativecorner.com
+            </p>
+        
+<br>
+    <!-- Location 5: Tech Oasis, Africa -->
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+        Tech Oasis, Africa
+    </h2>
+    <br><br>
+    <iframe id="iframe5" style="float: right; display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97963.463441306!2d25.9140257!3d-24.61978245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e953eb9bfe55d11%3A0x1f90c28a2e0832cb!2sTech%20Oasis!5e0!3m2!1sen!2sus!4v1713204130879!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p><strong>Hours of Operation:</strong></p>
+            <ul>
+                <li>Monday - Friday: 8:00 AM - 8:00 PM</li>
+                <li>Saturday: 11:00 AM - 6:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+            <p><strong>Location:</strong><br>
+                789 Innovation Street<br>
+                Tech Oasis, AF 12345<br>
+                Africa
+            </p>
+            <p><strong>Contact Information:</strong><br>
+                Phone: +27 123 4567 890<br>
+                Email: info@makerspacetechoasis.com
+            </p>
+<br>
+    <!-- Location 6: Creators Catalyst, India -->
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
         Creators Catalyst, India
       </h2>
       <br><br>
-      <iframe style="float: right;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10859688.858438717!2d68.75820213198328!3d19.98785480669723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea514cbcb00b%3A0xdee27bb5a3970607!2sMakerspace%20Creators%20Catalyst!5e0!3m2!1sen!2sus!4v1713809169351!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              <p><strong>Hours of Operation:</strong></p>
+      <iframe id="iframe6" style="float: right; display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.3064769192074!2d77.59488421425191!3d12.974900990855456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1673a9c45205%3A0x664e2091980f5223!2sCreators%20Catalyst!5e0!3m2!1sen!2sus!4v1713204161678!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p><strong>Hours of Operation:</strong></p>
               <ul>
                   <li>Monday - Friday: 7:00 AM - 8:00 PM</li>
                   <li>Saturday: 10:00 AM - 8:00 PM</li>
@@ -195,76 +196,86 @@
                   Email: info@makerspacecreatorscatalyst.com
               </p>
 <br>
-
-<h2 style="float: left;" class="accordion-header" id="techOasisHeading">
-    Magic Hour, Hawaii
-  </h2>
-  <br><br>
-  <iframe style="float: right;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806549.861649347!2d-162.31915197499995!3d21.2978208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006db5b1568bd3%3A0xe78110a3fdccaec6!2sMagic%20Hour%20Hawai%E2%80%99i!5e0!3m2!1sen!2sus!4v1713809381906!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <p><strong>Hours of Operation:</strong></p>
-          <ul>
-              <li>Monday - Friday: 9:30 AM - 8:00 PM</li>
-              <li>Saturday: 10:30 AM - 6:00 PM</li>
-              <li>Sunday: Closed</li>
-          </ul>
-          <p><strong>Location:</strong><br>
-              789 Thinkers Avenue<br>
-              Magic Hour, HW 6942<br>
-              Hawaii
-          </p>
-          <p><strong>Contact Information:</strong><br>
-              Phone: +27 123 4567 890<br>
-              Email: info@makerspacemagichour.com
-          </p>
-<br>
+    <!-- Location 7: Magic Hour, Hawaii -->
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+        Magic Hour, Hawaii
+    </h2>
+    <br><br>
+    <iframe id="iframe7" style="float: right; display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718207.553093176!2d-157.00912360000002!3d21.3109571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006df402bbb86b%3A0x78f54a0b1f469c56!2sMagic%20Hour!5e0!3m2!1sen!2sus!4v1713204189894!5m2!1sen!2sus" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p><strong>Hours of Operation:</strong></p>
+            <ul>
+                <li>Monday - Friday: 9:30 AM - 8:00 PM</li>
+                <li>Saturday: 10:30 AM - 6:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+            <p><strong>Location:</strong><br>
+                789 Thinkers Avenue<br>
+                Magic Hour, HW 6942<br>
+                Hawaii
+            </p>
+            <p><strong>Contact Information:</strong><br>
+                Phone: +27 123 4567 890<br>
+                Email: info@makerspacemagichour.com
+            </p>
+  <br>
     <!-- FAQ Section -->
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+        Frequently Asked Questions (FAQ)
+    </h2>
+    <br><br>
+            <p><strong>Q: What services do you offer at the makerspace?</strong></p>
+            <p>A: We offer a wide range of equipment and services, including 3D printing, woodworking tools, electronics lab, and more. Check our <a href="#equipment">Equipment</a> page for a detailed list.</p>
 
+            <p><strong>Q: Can I reserve equipment in advance?</strong></p>
+            <p>A: Absolutely! Techlab allows members to reserve equipment in advance through our online platform. This ensures that you have access to the tools you need when you arrive at our makerspace.</p>
 
-        <!-- FAQ Section -->
-            <h2 style="float: left;" class="accordion-header" id="faqHeading">
-              Frequently Asked Questions (FAQ)
-            </h2>
-            <br><br>
-                    <p><strong>Q: What services do you offer at the makerspace?</strong></p>
-                    <p>A: We offer a wide range of equipment and services, including 3D printing, woodworking tools, electronics lab, and more. Check our <a href="#equipment">Equipment</a> page for a detailed list.</p>
+            <p><strong>Q: Is there training available for beginners?</strong></p>
+            <p>A: Yes, Techlab provides training sessions for beginners. Our experienced staff conducts workshops and tutorials to help you become familiar with the equipment and unleash your creativity.</p>
+            
+            <p><strong>Q: What safety measures are in place at Techlab?</strong></p>
+            <p>A: Safety is our priority. Techlab follows strict safety protocols, and our staff is trained to guide members on the proper use of equipment. Safety briefings and guidelines are provided to ensure a secure environment.</p>
+            
+            <p><strong>Q: Can I bring a guest to use Techlab equipment with me?</strong></p>
+            <p>A: Currently, memberships are individual, and each member should use equipment individually. We may offer guest passes in the future.</p>
 
-                    <p><strong>Q: Can I reserve equipment in advance?</strong></p>
-                    <p>A: Absolutely! Techlab allows members to reserve equipment in advance through our online platform. This ensures that you have access to the tools you need when you arrive at our makerspace.</p>
+            <p><strong>Q: What happens if a reserved equipment is unavailable?</strong></p>
+            <p>A:  the rare event of unavailability, we'll notify you promptly and assist in rescheduling or finding suitable alternatives.</p>
 
-                    <p><strong>Q: Is there training available for beginners?</strong></p>
-                    <p>A: Yes, Techlab provides training sessions for beginners. Our experienced staff conducts workshops and tutorials to help you become familiar with the equipment and unleash your creativity.</p>
-                    
-                    <p><strong>Q: What safety measures are in place at Techlab?</strong></p>
-                    <p>A: Safety is our priority. Techlab follows strict safety protocols, and our staff is trained to guide members on the proper use of equipment. Safety briefings and guidelines are provided to ensure a secure environment.</p>
-                    
-                    <p><strong>Q: Can I bring a guest to use Techlab equipment with me?</strong></p>
-                    <p>A: Currently, memberships are individual, and each member should use equipment individually. We may offer guest passes in the future.</p>
-
-                    <p><strong>Q: What happens if a reserved equipment is unavailable?</strong></p>
-                    <p>A:  the rare event of unavailability, we'll notify you promptly and assist in rescheduling or finding suitable alternatives.</p>
-
-                    <!-- Add more FAQ items as needed -->
-                
-<br><br><br></div></div>
-
-
-<footer>
-    <div class="footer-content footer-header">
-        <div class="social-icons">
-            <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+            <!-- Add more FAQ items as needed -->
+        
+<br><br><br>
         </div>
     </div>
-    <div class="copyright">
+
+<footer>
+    <div class="footer-content">
+        <div class="social-icons wow fadeInDown" data-wow-delay="0.2s">
+            <a href="#" class="icon-link "><i  class="fab fa-facebook wow fadeInDown" data-wow-delay="0.6s"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-twitter wow fadeInDown" data-wow-delay="0.8s"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-instagram wow fadeInDown" data-wow-delay="1s"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-linkedin wow fadeInDown" data-wow-delay="1.2s"></i></a>
+        </div>
+    </div>
+    <div class="copyright wow fadeInDown" data-wow-delay="0.2s">
         &copy; 2024 Your Company Name. All Rights Reserved.
     </div>
 </footer>
-  <script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.0/wow.js'></script>
+<script>
+    new WOW().init();
+
+        // Preload iframes
+        function preloadIframes() {
+        var iframes = document.querySelectorAll('iframe');
+        for (var i = 0; i < iframes.length; i++) {
+            iframes[i].src = iframes[i].getAttribute('src');
+        }
+    }
+
+    window.onload = preloadIframes;
+</script>
 </body>
-</html>
+</html
