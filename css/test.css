@@ -172,3 +172,49 @@ footer {
 .selected {
   border: 2px solid yellow;
 }
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.icon-link {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #55acee;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+.twitter:hover{
+  color: #55acee;
+}
+
+.facebook:hover{
+  color:#1877F2;
+}
+
+.instagram:hover{
+  color:#c13584;
+}
+
+.linkedin:hover{
+  color:#0a66c2;
+}
