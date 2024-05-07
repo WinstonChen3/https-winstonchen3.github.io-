@@ -74,12 +74,10 @@
         <h3>Sign Up</h3>
     </div>
     <div class="card-body">
-        <form id="signup-form" method="POST" name="signup" data-netlify="true">
-            <input type="hidden" name="form-name" value="signup">
-
+        <form id="signup-form">
             <div class="mb-3">
                 <label for="membershipType" class="form-label">Membership Type</label>
-                <select class="form-select" id="membershipType" name="membershipType" onchange="checkDropdown()" required>
+                <select class="form-select" id="membershipType" name="membershipType" required>
                     <option value="" selected disabled>Select Membership Type</option>
                     <option value="basic">Basic</option>
                     <option value="premium">Pro</option>
@@ -88,13 +86,18 @@
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
             </div>
 
             <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" required>
             </div>
 
             <div class="mb-3 form-check">
@@ -102,7 +105,7 @@
                 <label class="form-check-label" for="terms">I agree to the <a href="#">terms and conditions</a></label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="button" class="btn btn-primary" onclick="validateAndSignup()">Sign Up</button>
         </form>
     </div>
 </div>
@@ -113,38 +116,19 @@
         // Initialize Netlify Identity
         netlifyIdentity.init();
 
-        // Function to handle form submission
-        document.getElementById('signup-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Get form data
-            var formData = new FormData(this);
-
-            // Signup user using Netlify Identity
-            netlifyIdentity.on('signup', function(user) {
-                console.log('User signed up:', user);
-                // Redirect or perform any other actions after successful signup
-            });
-
-            // Trigger Netlify Identity signup with form data
-            netlifyIdentity.open('signup');
-            netlifyIdentity.on('open', function() {
-                netlifyIdentity.on('submit', function() {
-                    netlifyIdentity.close();
+        // Function to validate the form and open the signup modal
+        function validateAndSignup() {
+            // Check if all required fields are filled out
+            if (document.getElementById('signup-form').checkValidity()) {
+                // Open the signup modal
+                netlifyIdentity.open('signup');
+                netlifyIdentity.on('signup', function(user) {
+                    console.log('User signed up:', user);
+                    // Redirect or perform any other actions after successful signup
                 });
-            });
-        });
-
-        // Function to check if the dropdown has a selection and enable/disable the button accordingly
-        function checkDropdown() {
-            var dropdown = document.getElementById('membershipType');
-            var button = document.querySelector('button[type="submit"]');
-
-            // Check if an option is selected in the dropdown
-            if (dropdown.value !== '') {
-                button.disabled = false; // Enable the button if a selection is made
             } else {
-                button.disabled = true; // Otherwise, disable the button
+                // If not all fields are filled out, show an alert
+                alert('Please fill out all required fields.');
             }
         }
     </script>
