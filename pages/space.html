@@ -2,97 +2,98 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Reservation | Techlab</title>
-  <link href="/css/login.css" rel="stylesheet">
+  <title>Reservation Form | Techlab</title>
+  <link href="/css/test.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="icon" href="../images/3.png" type="image/png">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
   <style> 
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8f9fa;
+    }
 
-    .left-align {
-      text-align: left;
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding-top: 100px;
     }
-    
-    .left-align input[type="text"],
-    .left-align input[type="email"],
-    .left-align input[type="password"] {
-      text-align: left;
-      width: 100%; /* Set the desired width for the input fields */
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
-    
+
+    .card-header {
+        background-color: #333;
+        color: #fff;
+        border-bottom: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
     .form-group {
-      margin-bottom: 10px;
+        margin-bottom: 20px;
     }
-    
-    .form-container {
-      margin-top: 40%; /* Set the desired margin-top value for the form container */
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .btn-primary:hover {
+        background-color: #555;
+    }
+
+    .form-check-label {
+        color: #666;
     }
   </style>
 </head>
 <body>
-  <main class="form-signin bg-dark align-items-center">
-    <div class="col-12 align-items-center mb-3 center-icon cont">
-      <a class="navbar-brand d-flex justify-content-center align-items-center" href="../index.html">
-        <img src="/images/3.png" alt="image/png">
-      </a>
-    </div>
-    <h3 class="text-white mb-0" style="text-align: center; margin-bottom: 0%;">Reservation Form</h3>
-    <div class="container">
-      <form class="form-container mt-1">
-        <div class="row mb-3">
-          <div class="col">
-            <div class="form-group">
-              <label for="reservationDate" class="text-white">Reservation Date</label>
-              <input type="date" class="form-control" id="reservationDate" required>
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-group">
-              <label for="reservationTime" class="text-white">Reservation Time</label>
-              <input type="time" class="form-control" id="reservationTime" required>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="additionalNotes" class="text-white">Additional Notes</label>
-          <textarea class="form-control" id="additionalNotes" rows="3"></textarea>
-        </div>
-        <div id="matchError" class="text-danger"></div>
-        <div class="text-center">
-          <div class="row justify-content-center">
-            <button type="submit" class="btn btn-dark w-25">Submit Reservation</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </main>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Reservation</h3>
+      </div>
+      <div class="card-body">
+        <form id="reservation-form" method="get" action="checkout.html" name="reservation">
+          <input type="hidden" name="form-name" value="reservation">
 
-  <script>
-    document.querySelector(".form-container").addEventListener("submit", function (event) {
-      event.preventDefault();
-  
-      const reservationDateValue = document.querySelector('#reservationDate').value;
-      const reservationTimeValue = document.querySelector('#reservationTime').value;
-      const additionalNotesValue = document.querySelector('#additionalNotes').value;
-  
-      console.log("Reservation Date: " + reservationDateValue);
-      console.log("Reservation Time: " + reservationTimeValue);
-      console.log("Additional Notes: " + additionalNotesValue);
-  
-      // You can add your logic or redirection here
-      window.location.href = 'checkout.html';
-    });
-  
-    // Additional event listener for Enter key press
-    document.querySelector(".form-container").addEventListener("keydown", function (event) {
-      if (event.key === 'Enter') {
-        event.preventDefault();
-        // Manually trigger the submit event
-        document.querySelector(".form-container").submit();
-      }
-    });
-  </script>
+          <div class="mb-3">
+            <label for="reservationDate" class="form-label text-dark">Reservation Date</label>
+            <input type="date" class="form-control" id="reservationDate" name="reservationDate" required>
+          </div>
+          <div class="mb-3">
+            <label for="reservationTime" class="form-label text-dark">Reservation Time</label>
+            <input type="time" class="form-control" id="reservationTime" name="reservationTime" required>
+          </div>
+          <div class="mb-3">
+            <label for="additionalNotes" class="form-label text-dark">Additional Notes</label>
+            <textarea class="form-control" id="additionalNotes" name="additionalNotes" rows="3"></textarea>
+          </div>
 
+          <button type="submit" class="btn btn-primary">Proceed</button>
+        </form>
+      </div>
+    </div>
+  </div>
+        
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
