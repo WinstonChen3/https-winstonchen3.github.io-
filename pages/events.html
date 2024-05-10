@@ -27,6 +27,26 @@
       padding: 5px 10px;
       border-radius: 5px;
     }
+
+    #loading_indicator {
+           position: absolute;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           margin: auto;
+           border: 10px solid grey;
+           border-radius: 50%;
+           border-top: 10px solid blue;
+           width: 100px;
+           height: 100px;
+           animation: spinIndicator 1s linear infinite;
+        }
+        @keyframes spinIndicator {
+           100% {
+              transform: rotate(360deg);
+           }
+        }
   </style>
 </head>
 <body>
@@ -61,8 +81,9 @@
         </div>
       </nav>
 </header>
+<div id = "loading_indicator"></div>
   <br><br><br><br>
-  <div class="mx-auto container mt-2">
+  <div class="mx-auto container mt-2" >
     <div class="row">
       <div class="col-md-4">
         <div id="prevNextButtons" class="btn-group">
@@ -451,5 +472,22 @@
       $('#monthBtn').addClass('active-btn');
     });
 </script>
+
+<script id="rendered-js" >
+  new WOW().init();
+  
+  document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
+      document.querySelector("body").style.visibility = "hidden";
+      document.getElementById("loading_indicator").style.visibility = "visible";
+    } else {
+      setTimeout(() => {
+        document.getElementById("loading_indicator").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+      }, 300);
+    }
+  };
+  //# sourceURL=pen.js
+      </script>
 </body>
 </html>
