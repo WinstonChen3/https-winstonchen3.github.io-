@@ -211,7 +211,7 @@
             </div>
           </div>
         </nav>
-  </header><br><br><br>
+  </header>
   <div class="container mt-5">
     <div class="row">
       <div class="col">
@@ -268,6 +268,8 @@
     </div>
 </footer>
   <script>
+    new WOW().init();
+
     let items = [
     { name: "WoodWorking",  price:"10/Lesson", brand:"",imageUrl: "/images/wood.jpeg" },
       { name: "3D Printing", price:"9/Lesson", brand:"",imageUrl: "/images/3d-printed-prosthesis.jpg" },
@@ -315,7 +317,7 @@ let itemsPerPage = 5;
         card.classList.add("card", "h-100", "shadow-sm");
 
         card.innerHTML = `
-            <img src="${item.imageUrl}" class="card-img-top" alt="${item.name}" style="height: 180px; object-fit: fill;">
+            <img src="${item.imageUrl}" class="card-img-top" alt="${item.name}" style="height: 180px; object-fit: cover;">
             <div class="card-body">
                 <span class="badge bg-primary">${item.brand}</span>
                 <span class="price-hp float-end">${item.price}$</span>
