@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card Pagination with Search</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></head>
-  <style>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/3.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.0/wow.js'></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
+  <title>Equipment | Techlab</title>
+  <link rel="stylesheet" href="/css/test.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
     .card p {
         text-align: center;
     }
@@ -24,7 +35,25 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
-
+    #loading_indicator {
+          position: absolute;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           margin: auto;
+           border: 10px solid grey;
+           border-radius: 50%;
+           border-top: 10px solid blue;
+           width: 100px;
+           height: 100px;
+           animation: spinIndicator 10s linear infinite;
+        }
+        @keyframes spinIndicator {
+           100% {
+              transform: rotate(360deg);
+           }
+        }
     .card-body.selected {
         background-color: #f0f0f0;
     }
@@ -154,43 +183,36 @@
     }
 </style>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" role="navigation">
-    <div class="container-fluid bg-dark py-2">
-      <div class="row align-items-center">
-        <div class="col-auto mx-auto navbar-brand-container">
-          <a class='navbar-brand bg-transparent text-white' href='/'>
-            <img src="../images/3.png" style="float: left;" alt="image/png">
-          </a>
-        </div>
-        <div class="col">
-          <ul class="navbar-nav ">
-            <li class="nav-item">
-              <a class='nav-link text-white' href='/'>Home</a>
-            </li>
-            <li class="nav-item">
-              <a class='nav-link text-white' href='/pages/events'>Events</a>
-            </li>
-            <li class="nav-item">
-              <a class='nav-link text-white' href='/clone/equipmentclone'>Equipments</a>
-            </li>
-            <li class="nav-item">
-              <a class='nav-link text-white' href='/clone/servicesclone'>Services</a>
-            </li>
-            <li class="nav-item">
-              <a class='nav-link text-white' href='/pages/locations'>Locations</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- Right-aligned content -->
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class='nav-link text-white' href='/pages/signup'>Get Started</a>
-        </li>
-      </ul>
-    </div>
-  </nav><br><br><br>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class='navbar-brand' href='/'><img src="../images/3.png" alt="Logo" style="max-height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='/'>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='/pages/events.html'>Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='/clone/equipmentclone.html'>Equipments</a>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='../clone/servicesclone.html'>Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='/pages/locations.html'>Locations</a>
+                </li>
+              </ul>
+              <a class='btn btn-outline-light me-2' href='/pages/signup.html' role='button'>Get Started</a>
+            </div>
+          </div>
+        </nav>
+      </header>
   <div class="container mt-5">
     <div class="row">
       <div class="col">
@@ -207,7 +229,8 @@
           </div>
         </div>
     </div>
-  
+    <div id = "loading_indicator"> </div>
+
       <div class="col-md-4">
         <div class="input-group mb-3">
           <input type="text" id="searchInput" class="form-control" placeholder="Search" oninput="searchItems()">
@@ -217,6 +240,10 @@
     </div>
     <br><br>
     <div id="cardContainer" class="row"></div>
+    <div class="d-flex justify-content-center">
+    <button type="button" class="btn btn-dark w-25"><a style="text-decoration: none; color: white;" href="/pages/services.html">Proceed</a></button>
+  </div>
+    <br><br>
     <nav>
       <ul id="pagination" class="pagination justify-content-center mt-3"></ul>
     </nav>
@@ -228,7 +255,19 @@
       <ul id="pagination" class="pagination justify-content-center mt-3"></ul>
     </nav>
   </div>
-
+  <footer>
+    <div class="footer-content">
+        <div class="social-icons wow fadeInDown" data-wow-delay="0.2s">
+            <a href="#" class="icon-link "><i  class="fab fa-facebook facebook wow fadeInDown" data-wow-delay="0.6s"></i></a>
+            <a href="#"  class="icon-link"><i class="fab fa-twitter twitter wow fadeInDown" data-wow-delay="0.8s"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-instagram instagram wow fadeInDown" data-wow-delay="1s"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-linkedin linkedin wow fadeInDown" data-wow-delay="1.2s"></i></a>
+        </div>
+    </div>
+    <div class="copyright wow fadeInDown" data-wow-delay="0.2s">
+        &copy; 2024 Your Company Name. All Rights Reserved.
+    </div>
+</footer>
   <script>
     let items = [
     { name: "Anycubic Photon Printer",  price:"$19.99", brand:"3D Printer",imageUrl: "/images/median 3d printer.png" },
@@ -315,11 +354,11 @@
 ];
 
   
-    let itemsPerPage = 10; 
+let itemsPerPage = 5; 
     let currentPage = 1; 
   
 
-function renderCards() {
+    function renderCards() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, items.length);
     const currentItems = items.slice(startIndex, endIndex);
@@ -341,10 +380,19 @@ function renderCards() {
                 <span class="price-hp float-end">${item.price}$</span>
                 <h5 class="card-title mt-3">${item.name}</h5>
                 <div class="text-center">
-                    <a href="#" class="btn">Buy Now</a>
+                    <button class="btn btn-success buy-now-button">Buy Now</button>
                 </div>
             </div>
         `;
+
+        // Add click event listener to the "Buy Now" button
+        const buyNowButton = card.querySelector(".buy-now-button");
+        buyNowButton.addEventListener("click", () => {
+            // Toggle class to indicate selection
+            card.classList.toggle("selected");
+            // Call function to add item to cart or perform other actions
+            buyItem(item.name);
+        });
 
         cardCol.appendChild(card);
         cardContainer.appendChild(cardCol);
@@ -504,20 +552,24 @@ function renderPagination() {
     let boughtItems = retrieveBoughtItemsFromStorage();
   
     function buyItem(itemName) {
-      
-      const item = items.find(item => item.name === itemName);
-      if (item) {
+    const item = items.find(item => item.name === itemName);
+    if (item) {
         boughtItems.push(item);
         storeBoughtItemsInStorage(boughtItems);
         alert(`You have added ${itemName} to your rentals. To complete the purchase, click proceed and go until you reach the checkout page.`);
-      }
+        // Toggle class to indicate selection
+        const card = document.querySelector(`[data-name="${itemName}"]`);
+        card.classList.toggle("selected");
     }
+}
+
     function renderTable() {
         const table = document.createElement("table");
         table.id = "itemsTable";
         table.innerHTML = `
           <thead>
             <tr>
+              <th>Buy</th>
               <th>Name</th>
               <th>Price</th>
               <th>Brand</th>
@@ -527,6 +579,7 @@ function renderPagination() {
           <tbody>
             ${items.map(item => `
               <tr>
+                <td><button class="btn btn-success buy-now-button">Buy Now</button></td>
                 <td>${item.name}</td>
                 <td>${item.price}</td>
                 <td>${item.brand}</td>
@@ -545,8 +598,46 @@ function renderPagination() {
           $('#itemsTable').DataTable();
         });
       }
+      let isTableLayout = false; // Variable to track current layout state
+
+function toggleLayout() {
+    if (isTableLayout) {
+        renderCards(); // Switch to card layout
+    } else {
+        renderTable(); // Switch to table layout
+    }
+    isTableLayout = !isTableLayout; // Toggle layout state
+}
+
+// Call toggleLayout function when the button is clicked
+document.addEventListener("DOMContentLoaded", function() {
+    // Add event listener for the toggleLayoutButton
+    const toggleLayoutButton = document.getElementById("toggleLayoutButton");
+    if (toggleLayoutButton) {
+        toggleLayoutButton.addEventListener("click", toggleLayout);
+    }
+
+    // Render cards and pagination
     renderCards();
     renderPagination();
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // Your existing code for other event listeners and functions
+
+   // Add event listener to Buy Now buttons
+   const buyNowButtons = document.querySelectorAll('.buy-now-button');
+    buyNowButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const itemName = event.target.closest('.card').dataset.name;
+            buyItem(itemName);
+        });
+
+
+});
+
+});
+
+});
   </script>
   
     </body>

@@ -113,25 +113,43 @@
     
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
-        // Initialize Netlify Identity
         netlifyIdentity.init();
-
-        // Function to validate the form and open the signup modal
+    
         function validateAndSignup() {
-            // Check if all required fields are filled out
             if (document.getElementById('signup-form').checkValidity()) {
-                // Open the signup modal
                 netlifyIdentity.open('signup');
                 netlifyIdentity.on('signup', function(user) {
                     console.log('User signed up:', user);
-                    // Redirect or perform any other actions after successful signup
                 });
             } else {
-                // If not all fields are filled out, show an alert
                 alert('Please fill out all required fields.');
             }
         }
+    
+        function checkSignInStatus() {
+            const user = netlifyIdentity.currentUser();
+            if (user) {
+           window.location.href = "equipment.html";
+            } else {
+                console.log("User is not signed in.");
+            }
+        }
+        function checkSignInStatus() {
+    const user = netlifyIdentity.currentUser();
+    if (user) {
+        window.location.href = "equipment.html";
+    } else {
+        console.log("User is not signed in.");
+    }
+}
+
+
+checkSignInStatus();
+
+setInterval(checkSignInStatus, 2000); 
+
     </script>
+        
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

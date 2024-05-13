@@ -1,227 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/3.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/test.css">
-    <title>Services</title>
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/3.png"/>
+  <title>Services | Techlab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.0/wow.js'></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/test.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .card p {
+        text-align: center;
+    }
 
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class='navbar-brand' href='/'><img src="../images/3.png" alt="Logo" style="max-height: 40px;"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class='nav-link text-white' href='/'>Home</a>
-              </li>
-              <li class="nav-item">
-                <a class='nav-link text-white' href='/pages/events.html'>Events</a>
-              </li>
-              <li class="nav-item">
-                <a class='nav-link text-white' href='/clone/equipmentclone.html'>Equipments</a>
-              </li>
-              <li class="nav-item">
-                <a class='nav-link text-white' href='../clone/servicesclone.html'>Services</a>
-              </li>
-              <li class="nav-item">
-                <a class='nav-link text-white' href='/pages/locations.html'>Locations</a>
-              </li>
-            </ul>
-            <a class='btn btn-outline-light me-2' href='/pages/signup.html' role='button'>Get Started</a>
-          </div>
-        </div>
-      </nav>
-</header>
+    .dropdown-toggle:focus {
+        box-shadow: none;
+        outline: none;
+    }
 
-      </header>
-      <h1 style="text-align: center;">Services</h1>
-      <p style="text-align: center;" class="middle_text">Click On Items To Buy</p>
-<div class="container">
-  <div class="row">
-  <div class="col-md-4">
-  <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-    <img src="../images/3d.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-    <div class="card-body">
-      <h5 class="middle_text">3D Printing</h5>
-      <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
-      <p class="card-text centered">29.99$ Per Month</p>
-    </div>
-  </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-      <img src="../images/wood.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-      <div class="card-body">
-        <h5 class="middle_text">Woodworking</h5>
-        <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
-        <p class="card-text centered">14.99$ Per Month</p>
-      </div>
-    </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card highlightable-card"  style="height: 30rem;"onclick="toggleHighlight(this)">
-        <img src="../images/electric.jpeg"class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-        <div class="card-body">
-          <h5 class="middle_text">Electronics Prototyping</h5>
-          <p class="card-text">Experiment with circuits, microcontrollers, and sensors to test your projects and innovations.</p>
-          <p class="card-text centered">19.99$ Per Month</p>
-        </div>
-      </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-4">
-        <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-          <img src="../images/textile.jpeg"class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-          <div class="card-body">
-            <h5 class="middle_text">Textile Design</h5>
-            <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
-            <p class="card-text centered">14.99$ Per Month</p>
-          </div>
-        </div>
-        </div>
-          <div class="col-md-4">
-            <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-              <img src="../images/vr.jpeg"class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-              <div class="card-body">
-                <h5 class="middle_text">Virtual Reality</h5>
-                <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
-                <p class="card-text centered">29.99$ Per Month</p>
-              </div>
-            </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card highlightable-card"  style="height: 30rem;" onclick="toggleHighlight(this)">
-                <img src="../images/laser.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-                <div class="card-body">
-                  <h5 class="middle_text">Laser Cutting and Engraving</h5>
-                  <p class="card-text">Create intricate designs and patterns on various materials using our laser cutting and engraving machines.</p>
-                  <p class="card-text centered">14.99$ Per Month</p>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card highlightable-card"  style="height: 30rem;" onclick="toggleHighlight(this)">
-                  <img src="../images/ceramic.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-                  <div class="card-body">
-                    <h5 class="middle_text">Ceramics</h5>
-                    <p class="card-text">Get hands-on experience with pottery and ceramic arts, using our pottery wheels, kilns, and glazing equipment.</p>
-                    <p class="card-text centered">14.99$ Per Month</p>
-                  </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-                    <img src="../images/Fabrication.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-                    <div class="card-body">
-                      <h5 class="middle_text">Metalworking</h5>
-                      <p class="card-text">Learn metalworking techniques such as welding and blacksmithing to create metal sculptures, jewelry, and functional objects.</p>
-                      <p class="card-text centered">24.99$ Per Month</p>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-                      <img src="../images/music.png" class="card-img-top" alt="" style="height: 20rem; width: 90%; object-fit: cover;" alt="">
-                      <div class="card-body">
-                        <h5 class="middle_text">Audio and Music Production</h5>
-                        <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music 
-                        <p class="card-text centered">14.99$ Per Month</p>
-                        </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-                        <img src="../images/ar.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
-                        <div class="card-body">
-                          <h5 class="middle_text">Augmented Reality (AR)</h5>
-                          <p class="card-text">Explore and develop augmented reality applications and experiences using our AR devices and development tools.</p>
-                          <p class="card-text centered">19.99$ Per Month</p>
-                        </div>
-                      </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-                          <img src="../images/food.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-                          <div class="card-body">
-                            <h5 class="middle_text">Food Hacking</h5>
-                            <p class="card-text">Explore the intersection of food and technology, experiment with molecular gastronomy, and create innovative culinary experiences.</p>
-                            <p class="card-text centered">9.99$ Per Month</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
-                            <img src="../images/coding.jpg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;">
-                          <div class="card-body">
-                            <h5 class="middle_text">Coding and Programming</h5>
-                            <p class="card-text">Learn coding languages, web development, and software programming using our computers and coding resources.</p>
-                            <p class="card-text centered">14.99$ Per Month</p>
-                          </div>
-                        </div>
-                      </div>
-  </div>
-</div>
-  <div class="row justify-content-center">
-    <button type="submit" class="btn btn-dark w-25"><a href="/pages/signup.html">Proceed</a></button>
-</div><br>
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="bootstrap" viewBox="0 0 118 94">
-    <title>Bootstrap</title>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
-  </symbol>
-  <symbol id="facebook" viewBox="0 0 16 16">
-    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-  </symbol>
-  <symbol id="instagram" viewBox="0 0 16 16">
-      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-  </symbol>
-  <symbol id="twitter" viewBox="0 0 16 16">
-    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-  </symbol>
-</svg>
-<footer>
-  <div class="footer-container">
-      <div class="row">
-          <div class="col-md-6">
-              <h3>Contact Us</h3>
-              <p class="text-white">If you have any questions or inquiries, feel free to contact us. Our team is always ready to assist you.</p>
-              <ul class="nav col-md-3 col-6 justify-content-end">
-                <li class="ms-3"><a class="link-body-emphasis fa-3x" href="https://twitter.com"><svg style="fill: white;"  width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
-                <li class="ms-3"><a class="link-body-emphasis fa-3x" href="https://instagram.com"><svg style="fill: white;"  width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
-                <li class="ms-3"><a class="link-body-emphasis fa-3x" href="https://facebook.com"><svg style="fill: white;" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
-              </ul>          
-          </div>
-          <div class="col-md-6">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a class="nav-item text-white" href="/index.html">Home</a></li>
-                  <li><a class="nav-item text-white" href="/pages/events.html">Events</a></li>
-                  <li><a class="nav-item text-white" href="/clone/equipmentclone.html">Equipments</a></li>
-                  <li><a class="nav-item text-white" href="/clone/servicesclone.html">Services</a></li>
-                  <li><a class="nav-item text-white" href="/pages/locations.html">Locations</a></li>
+    .highlightable-card {
+        transition: box-shadow 0.3s;
+    }
+
+    .highlightable-card:hover,
+    .highlightable-card:focus {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #loading_indicator {
+          position: absolute;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           margin: auto;
+           border: 10px solid grey;
+           border-radius: 50%;
+           border-top: 10px solid blue;
+           width: 100px;
+           height: 100px;
+           animation: spinIndicator 10s linear infinite;
+        }
+        @keyframes spinIndicator {
+           100% {
+              transform: rotate(360deg);
+           }
+        }
+    .card-body.selected {
+        background-color: #f0f0f0;
+    }
+
+    .card-body img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 4px;
+        background-color: #ffffff;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::after {
+        transform: scaleX(1);
+    }
+
+    .dropdown-item::after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color 0.3s;
+    }
+
+    .dropdown-item:hover::after {
+        border-bottom-color: #ffffff;
+    }
+
+    .svg-large {
+        height: 50%;
+        width: 50%;
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgb(255, 255, 255);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .white {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .bd-mode-toggle {
+        z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+    }
+
+    .white {
+        fill: white;
+    }
+
+    .highlight {
+        outline: 2px solid yellow;
+    }
+    .navbar-brand img {
+      max-height: 75px; /* Adjust the max-height as needed */
+    }
+    .accordion-button {
+        background-color: #343a40;
+        /* Dark background color */
+        color: #fff !important;
+        /* White text color */
+        transition: none;
+        /* Disable color change on click */
+        
+    }
+</style>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class='navbar-brand' href='/'><img src="../images/3.png" alt="Logo" style="max-height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='/'>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='/pages/events.html'>Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='/clone/equipmentclone.html'>Equipments</a>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='../clone/servicesclone.html'>Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link text-white' href='/pages/locations.html'>Locations</a>
+                </li>
               </ul>
+              <a class='btn btn-outline-light me-2' href='/pages/signup.html' role='button'>Get Started</a>
+            </div>
           </div>
+        </nav>
+      </header>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="col-md-1">
+          <div style="float: right;" class="form-group">
+            <select id="itemsPerPageInput" class="form-control" onchange="changeItemsPerPage()">
+              <option value="5" selected>5 </option>
+              <option value="10">10 </option>
+              <option value="15">15 </option>
+              <option value="20">20 </option>
+              <option value="30">30 </option>
+    
+            </select>
+          </div>
+        </div>
+    </div>
+    <div id = "loading_indicator"> </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search" oninput="searchItems()">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
       </div>
+    </div>
+    <br><br>
+    <div id="cardContainer" class="row"></div>
+    <div class="d-flex justify-content-center">
+    <button type="button" class="btn btn-dark w-25"><a style="text-decoration: none; color: white;" href="/pages/signup.html">Proceed</a></button>
   </div>
+    <br><br>
+    <nav>
+      <ul id="pagination" class="pagination justify-content-center mt-3"></ul>
+    </nav>
+  </div>
+  </div>
+    </div>
+    <div id="cardContainer" class="row"></div>
+    <nav>
+      <ul id="pagination" class="pagination justify-content-center mt-3"></ul>
+    </nav>
+  </div>
+  <footer>
+    <div class="footer-content">
+        <div class="social-icons wow fadeInDown" data-wow-delay="0.2s">
+            <a href="#" class="icon-link "><i  class="fab fa-facebook facebook wow fadeInDown" data-wow-delay="0.6s"></i></a>
+            <a href="#"  class="icon-link"><i class="fab fa-twitter twitter wow fadeInDown" data-wow-delay="0.8s"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-instagram instagram wow fadeInDown" data-wow-delay="1s"></i></a>
+            <a href="#" class="icon-link"><i class="fab fa-linkedin linkedin wow fadeInDown" data-wow-delay="1.2s"></i></a>
+        </div>
+    </div>
+    <div class="copyright wow fadeInDown" data-wow-delay="0.2s">
+        &copy; 2024 Your Company Name. All Rights Reserved.
+    </div>
 </footer>
-    <script>
-function toggleHighlight(card) {
-  card.classList.toggle('highlight');
+  <script>
+    new WOW().init();
+
+    let items = [
+    { name: "WoodWorking",  price:"10/Lesson", brand:"",imageUrl: "/images/wood.jpeg" },
+      { name: "3D Printing", price:"9/Lesson", brand:"",imageUrl: "/images/3d-printed-prosthesis.jpg" },
+      { name: "Food Hacking",  price:"8/Lesson", brand:"",imageUrl: "/images/food.jpeg" },
+      { name: "Musical Arts",  price:"10/Lesson", brand:"",imageUrl: "/images/music.png" },
+      { name: "AR Technology", price:"11/Lesson", brand:"",imageUrl: "/images/ar.jpeg" },
+      { name: "VR Technology",  price:"11/Lesson", brand:"",imageUrl: "/images/vr.jpeg" },
+      { name: "Metalworking Tools",  price:"10/Lesson", brand:"",imageUrl: "/images/steel-.jpeg" },
+      { name: "Electronics Prototyping",  price:"10/Lesson", brand:"",imageUrl: "/images/electric.jpeg" },
+      { name: "Laser Cutting And Engraving",  price:"9/Lesson",brand:"", imageUrl: "/images/laser.jpeg" },
+      { name: "GlassBlowing",  price:"11/Lesson",brand:"", imageUrl: "/images/Modern-Glassblowing.jpeg" },
+
+
+
+      { name: "Pottery Wheels",  price:"14.99", brand:"Laser Cutter", imageUrl: "/images/potter-class-pots.jpg" },
+      { name: "Screen Printing",  price:"64.99", brand:"Laser Cutter",imageUrl: "/images/Screen-Printing-Adamley-Textiles.jpg" },
+      { name: "Jewelry Making", price:"71.99", brand:"Laser Cutter",imageUrl: "/images/Untitled_5_1.jpeg" },
+      { name: "Leather Working", price:"641.99", brand:"Laser Cutter",imageUrl: "/images/stitchingpony-0018c5148c7647d9a0a44fb4d5000649.jpg" },
+      { name: "CNC Machine Study", price:"11.99", brand:"Laser Cutter",imageUrl: "/images/CNC.jpg" },
+      { name: "Robotics Workshop", price:"18.99", brand:"Laser Cutter",imageUrl: "/images/image1.png" },
+      { name: "Bike Repair Station", price:"16.99", brand:"Laser Cutter",imageUrl: "/images/bicycle-maintenance1.jpg" },
+      { name: "Photography Studio", price:"22.99", brand:"Laser Cutter",imageUrl: "/images/640px-Photo_Studio_-_22_Feb._2011.jpg" },
+      { name: "Audio Recording Studio", price:"714.99", brand:"Laser Cutter",imageUrl: "/images/June_Audio_full-2.jpg" },
+      { name: "Podcasting Studio", price:"104.99", brand:"Laser Cutter",imageUrl: "/images/1_QilmA5XtWPueIJiOlMhyNw.jpg" },
+];
+
+  
+let itemsPerPage = 5; 
+    let currentPage = 1; 
+  
+
+    function renderCards() {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, items.length);
+    const currentItems = items.slice(startIndex, endIndex);
+
+    const cardContainer = document.getElementById("cardContainer");
+    cardContainer.innerHTML = "";
+
+    currentItems.forEach(item => {
+        const cardCol = document.createElement("div");
+        cardCol.classList.add("col-md-4", "mb-4");
+
+        const card = document.createElement("div");
+        card.classList.add("card", "h-100", "shadow-sm");
+
+        card.innerHTML = `
+            <img src="${item.imageUrl}" class="card-img-top" alt="${item.name}" style="height: 180px; object-fit: cover;">
+            <div class="card-body">
+                <span class="badge bg-primary">${item.brand}</span>
+                <span class="price-hp float-end">${item.price}$</span>
+                <h5 class="card-title mt-3">${item.name}</h5>
+                <div class="text-center">
+                    <button class="btn btn-success buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        `;
+
+        // Add click event listener to the "Buy Now" button
+        const buyNowButton = card.querySelector(".buy-now-button");
+        buyNowButton.addEventListener("click", () => {
+            // Toggle class to indicate selection
+            card.classList.toggle("selected");
+            // Call function to add item to cart or perform other actions
+            buyItem(item.name);
+        });
+
+        cardCol.appendChild(card);
+        cardContainer.appendChild(cardCol);
+    });
 }
+
+  
+
+function renderPagination() {
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const pagination = document.getElementById("pagination");
+  pagination.innerHTML = "";
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageLink = document.createElement("li");
+    pageLink.classList.add("page-item");
+    if (i === currentPage) {
+      pageLink.classList.add("active");
+    }
+    pageLink.innerHTML = `
+      <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+    `;
+    pagination.appendChild(pageLink);
+  }
+}
+
+    function changePage(pageNumber) {
+      currentPage = pageNumber;
+      renderCards();
+      renderPagination();
+    }
+  
+
+    function searchItems() {
+      const searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
+      if (searchTerm === "") {
+        items = [
+        { name: "WoodWorking",  price:"10/Lesson", brand:"",imageUrl: "/images/wood.jpeg" },
+      { name: "3D Printing", price:"9/Lesson", brand:"",imageUrl: "/images/3d-printed-prosthesis.jpg" },
+      { name: "Food Hacking",  price:"8/Lesson", brand:"",imageUrl: "/images/food.jpeg" },
+      { name: "Musical Arts",  price:"10/Lesson", brand:"",imageUrl: "/images/music.png" },
+      { name: "AR Technology", price:"11/Lesson", brand:"",imageUrl: "/images/ar.jpeg" },
+      { name: "VR Technology",  price:"11/Lesson", brand:"",imageUrl: "/images/vr.jpeg" },
+      { name: "Metalworking Tools",  price:"10/Lesson", brand:"",imageUrl: "/images/steel-.jpeg" },
+      { name: "Electronics Prototyping",  price:"10/Lesson", brand:"",imageUrl: "/images/electric.jpeg" },
+      { name: "Laser Cutting And Engraving",  price:"9/Lesson",brand:"", imageUrl: "/images/laser.jpeg" },
+      { name: "GlassBlowing",  price:"11/Lesson",brand:"", imageUrl: "/images/Modern-Glassblowing.jpeg" },
+
+
+
+      { name: "Pottery Wheels",  price:"14.99", brand:"Laser Cutter", imageUrl: "/images/potter-class-pots.jpg" },
+      { name: "Screen Printing",  price:"64.99", brand:"Laser Cutter",imageUrl: "/images/Screen-Printing-Adamley-Textiles.jpg" },
+      { name: "Jewelry Making", price:"71.99", brand:"Laser Cutter",imageUrl: "/images/Untitled_5_1.jpeg" },
+      { name: "Leather Working", price:"641.99", brand:"Laser Cutter",imageUrl: "/images/stitchingpony-0018c5148c7647d9a0a44fb4d5000649.jpg" },
+      { name: "CNC Machine Study", price:"11.99", brand:"Laser Cutter",imageUrl: "/images/CNC.jpg" },
+      { name: "Robotics Workshop", price:"18.99", brand:"Laser Cutter",imageUrl: "/images/image1.png" },
+      { name: "Bike Repair Station", price:"16.99", brand:"Laser Cutter",imageUrl: "/images/bicycle-maintenance1.jpg" },
+      { name: "Photography Studio", price:"22.99", brand:"Laser Cutter",imageUrl: "/images/640px-Photo_Studio_-_22_Feb._2011.jpg" },
+      { name: "Audio Recording Studio", price:"714.99", brand:"Laser Cutter",imageUrl: "/images/June_Audio_full-2.jpg" },
+      { name: "Podcasting Studio", price:"104.99", brand:"Laser Cutter",imageUrl: "/images/1_QilmA5XtWPueIJiOlMhyNw.jpg" },
+];
+
+
+      } else {
+        items = items.filter(item =>
+    item.name.toLowerCase().includes(searchTerm) ||
+    item.brand.toLowerCase().includes(searchTerm)
+);
+
+      }
+      currentPage = 1; 
+      renderCards();
+      renderPagination();
+    }
+  
+    
+    function changeItemsPerPage() {
+      itemsPerPage = parseInt(document.getElementById("itemsPerPageInput").value);
+      currentPage = 1; 
+      renderCards();
+      renderPagination();
+    }
+  
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        searchItems();
+      }
+    }
+  
+    function retrieveBoughtItemsFromStorage() {
+      const storedBoughtItems = localStorage.getItem("boughtItems");
+      return storedBoughtItems ? JSON.parse(storedBoughtItems) : [];
+    }
+  
+
+    function storeBoughtItemsInStorage(boughtItems) {
+      localStorage.setItem("boughtItems", JSON.stringify(boughtItems));
+    }
+  
+    let boughtItems = retrieveBoughtItemsFromStorage();
+  
+    function buyItem(itemName) {
+    const item = items.find(item => item.name === itemName);
+    if (item) {
+        boughtItems.push(item);
+        storeBoughtItemsInStorage(boughtItems);
+        alert(`You have added ${itemName} to your rentals. To complete the purchase, click proceed and go until you reach the checkout page.`);
+        // Toggle class to indicate selection
+        const card = document.querySelector(`[data-name="${itemName}"]`);
+        card.classList.toggle("selected");
+    }
+}
+
+    function renderTable() {
+        const table = document.createElement("table");
+        table.id = "itemsTable";
+        table.innerHTML = `
+          <thead>
+            <tr>
+              <th>Buy</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Brand</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${items.map(item => `
+              <tr>
+                <td><button class="btn btn-success buy-now-button">Buy Now</button></td>
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+                <td>${item.brand}</td>
+                <td><img src="${item.imageUrl}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: scale-down;"></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        `;
+  
+        const cardContainer = document.getElementById("cardContainer");
+        cardContainer.innerHTML = "";
+        cardContainer.appendChild(table);
+  
+        // Initialize DataTables
+        $(document).ready(function() {
+          $('#itemsTable').DataTable();
+        });
+      }
+      let isTableLayout = false; // Variable to track current layout state
+
+function toggleLayout() {
+    if (isTableLayout) {
+        renderCards(); // Switch to card layout
+    } else {
+        renderTable(); // Switch to table layout
+    }
+    isTableLayout = !isTableLayout; // Toggle layout state
+}
+
+// Call toggleLayout function when the button is clicked
+document.addEventListener("DOMContentLoaded", function() {
+    // Add event listener for the toggleLayoutButton
+    const toggleLayoutButton = document.getElementById("toggleLayoutButton");
+    if (toggleLayoutButton) {
+        toggleLayoutButton.addEventListener("click", toggleLayout);
+    }
+
+    // Render cards and pagination
+    renderCards();
+    renderPagination();
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // Your existing code for other event listeners and functions
+
+   // Add event listener to Buy Now buttons
+   const buyNowButtons = document.querySelectorAll('.buy-now-button');
+    buyNowButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const itemName = event.target.closest('.card').dataset.name;
+            buyItem(itemName);
+        });
+
+
+});
+
+});
+
+});
   </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+  
+    </body>
 </html>
