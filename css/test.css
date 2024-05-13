@@ -7,9 +7,7 @@ body {
   padding: 0;
 }
 
-.container {
-  margin: 0; /* Adjust the margin value as needed */
-}
+
 .footer-header {
   margin: 0;
 }
@@ -18,38 +16,6 @@ body {
 .navbar {
   background-color: #333;
 }
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.social-icons {
-  margin-top: 10px;
-}
-
-.icon-link {
-  color: #fff;
-  font-size: 24px;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.icon-link:hover {
-  color: #55acee;
-}
-
-.copyright {
-  margin-top: 20px;
-}
-
 
 
 .navbar .getstarted:hover {
@@ -194,10 +160,6 @@ footer {
   font-size: 24px;
   margin: 0 10px;
   transition: color 0.3s ease;
-}
-
-.icon-link:hover {
-  color: #55acee;
 }
 
 .copyright {
