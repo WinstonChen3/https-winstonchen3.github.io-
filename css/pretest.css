@@ -40,10 +40,6 @@ body {
     transition: color 0.3s ease;
   }
   
-  .icon-link:hover {
-    color: #55acee;
-  }
-  
   .copyright {
     margin-top: 20px;
   }
