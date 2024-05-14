@@ -42,17 +42,6 @@
            left: 0;
            right: 0;
            margin: auto;
-           border: 10px solid grey;
-           border-radius: 50%;
-           border-top: 10px solid blue;
-           width: 100px;
-           height: 100px;
-           animation: spinIndicator 10s linear infinite;
-        }
-        @keyframes spinIndicator {
-           100% {
-              transform: rotate(360deg);
-           }
         }
     .card-body.selected {
         background-color: #f0f0f0;
@@ -65,26 +54,6 @@
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .nav-link {
-        position: relative;
-        transition: 0.3s;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        width: 100%;
-        height: 4px;
-        background-color: #ffffff;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .nav-link:hover::after {
-        transform: scaleX(1);
-    }
 
     .dropdown-item::after {
         content: '';
@@ -166,21 +135,15 @@
         fill: white;
     }
 
-    .highlight {
-        outline: 2px solid yellow;
-    }
     .navbar-brand img {
       max-height: 75px; /* Adjust the max-height as needed */
     }
     .accordion-button {
-        background-color: #343a40;
-        /* Dark background color */
-        color: #fff !important;
-        /* White text color */
-        transition: none;
-        /* Disable color change on click */
-        
-    }
+    background-color: #343a40; /* Dark background color */
+    color: #fff !important; /* White text color */
+    /* Remove transition property */
+}
+
 </style>
   <body>
     <header>
@@ -229,7 +192,6 @@
           </div>
         </div>
     </div>
-    <div id = "loading_indicator"> </div>
 
       <div class="col-md-4">
         <div class="input-group mb-3">
@@ -241,8 +203,9 @@
     <br><br>
     <div id="cardContainer" class="row"></div>
     <div class="d-flex justify-content-center">
-    <button type="button" class="btn btn-dark w-25"><a style="text-decoration: none; color: white;" href="/pages/signup.html">Proceed</a></button>
-  </div>
+      <a href="/pages/signup.html" class="btn btn-dark w-25" style="text-decoration: none; color: white;">Proceed</a>
+    </div>
+    
     <br><br>
     <nav>
       <ul id="pagination" class="pagination justify-content-center mt-3"></ul>

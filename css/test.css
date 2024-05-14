@@ -86,7 +86,7 @@ body {
 
 /* Dynamic underline effect for navbar links */
 .nav-link {
-  position: none;
+  position: relative; /* Change position to relative */
   color: #333; /* Change text color */
   text-decoration: none; /* Remove default underline */
 }
@@ -97,6 +97,7 @@ body {
   left: 0;
   bottom: -2px;
   width: 0;
+  font-family: "Segoe UI", sans-serif;
   height: 2px;
   background-color: #fff !important; /* Add !important */
   transition: width 0.3s ease, left 0.3s ease;
@@ -179,4 +180,11 @@ footer {
 
 .linkedin:hover{
   color:#0a66c2;
+}    .social-icons .icon-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+.social-icons .icon-link:hover {
+  text-decoration: none; /* Remove underline on hover */
 }
