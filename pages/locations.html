@@ -12,6 +12,8 @@
     <script src="
 https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js
 "></script>
+<link rel="shortcut icon" type="image/x-icon" href="../images/3.png"/>
+
 <title>Techlab | Locations</title>
 
 <link rel="stylesheet" href="/css/test.css"><link href="
@@ -151,11 +153,7 @@ border-bottom: 0.5px solid black;
             </div>
           </nav>
     </header>
-     <div id = "loading_indicator"> </div>
 <div class="container mx-auto">
-    <h1 class="text-center wow fadeInDown" data-wow-delay="0.5s">Locations and FAQ</h1>
-    <!-- Locations Accordion -->
-    <!-- Location 1: Communityville, USA -->
     <div class="wow fadeInDown" data-wow-delay="0.5s">
         <h2 style="float: left;" class="accordion-header" id="communityvilleHeading">
             Communityville, USA
@@ -352,8 +350,6 @@ border-bottom: 0.5px solid black;
 
             <p><strong>Q: What happens if a reserved equipment is unavailable?</strong></p>
             <p>A:  the rare event of unavailability, we'll notify you promptly and assist in rescheduling or finding suitable alternatives.</p>
-
-            <!-- Add more FAQ items as needed -->
         
 <br><br><br>
         </div>
@@ -379,16 +375,7 @@ border-bottom: 0.5px solid black;
 <script>
     new WOW().init();
 
-document.onreadystatechange = function () {
-   if (document.readyState !== "complete") {
-      document.querySelector("body").style.visibility = "hidden";
-      document.getElementById("loading_indicator").style.visibility = "visible";
-   } else {
-      setTimeout(() => {
-         document.getElementById("loading_indicator").style.display ="none";
-         document.querySelector("body").style.visibility = "visible";
-      }, 300)
-   }
-};</script>
+
+</script>
 </body>
 </html

@@ -91,7 +91,15 @@
       <div class="card-body">
         <form id="checkout-form" method="get" action="ending.html" name="checkout">
           <input type="hidden" name="form-name" value="reservation">
-
+          <div class="mb-3">
+            <label for="membershipType" class="form-label">Membership Type</label>
+            <select class="form-select" id="membershipType" name="membershipType" required>
+                <option value="" selected disabled>Select Membership Type</option>
+                <option value="basic">Basic</option>
+                <option value="premium">Pro</option>
+                <option value="gold">Premium</option>
+            </select>
+        </div>
           <div class="mb-3">
             <label for="creditCardNumber" class="text-dark">Credit Card Number</label>
             <input type="text" class="form-control" id="creditCardNumber" name="creditCardNumber" placeholder="Credit Card Number" required>
@@ -106,8 +114,10 @@
             <label for="cvv" class="text-dark">CVV</label>
             <input type="text" class="form-control" id="cvv" name="cvv" placeholder="CVV" required>
               </div>
-
           <button type="submit" class="btn btn-primary">Proceed</button>
+          <div class="d-flex justify-content-center">
+            <a href="/pages/membership.html"> <-- Membership Info</a>
+          </div>
         </form>
       </div>
     </div>
