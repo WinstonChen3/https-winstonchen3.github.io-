@@ -72,7 +72,7 @@
 <div class="card">
     <div class="card-header">
         <h3>Sign Up</h3>
-        <button type="button" style="text-decoration: none; border: #fff 2px solid ;" class="btn btn-link text-light" onclick="openForm()">Open Form</button>
+        <button type="button" class="btn btn-link" onclick="openForm()">Open Form</button>
     </div>
     <div class="card-body">
         <div id="netlify-identity-forms">
@@ -95,7 +95,7 @@
         if (window.netlifyIdentity) {
             const user = netlifyIdentity.currentUser();
             if (user) {
-                window.location.href = "equipment.html";
+                window.location.href = "services2.html";
             }
         }
     }
@@ -107,15 +107,13 @@
 
         openForm();
 
-        checkUserStatus();
+        setInterval(checkUserStatus, 500);
 
-        // After signup, redirect user
         netlifyIdentity.on('signup', function(user) {
             console.log('User signed up:', user);
             window.location.href = "services2.html"; 
         });
 
-        // After login, redirect user
         netlifyIdentity.on('login', function(user) {
             console.log('User logged in:', user);
             window.location.href = "services2.html"; 
