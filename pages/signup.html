@@ -72,41 +72,52 @@
 <div class="card">
     <div class="card-header">
         <h3>Sign Up</h3>
+        <button type="button" style="text-decoration: none; border: #fff 2px solid ;" class="btn btn-link text-light" onclick="openForm()">Open Form</button>
     </div>
     <div class="card-body">
-        <form id="signup-form">
-        </form>
+        <div id="netlify-identity-forms">
+        </div>
     </div>
 </div>
 </div> 
     
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
+    function openForm() {
+        if (window.netlifyIdentity) {
+            const netlifyIdentityForms = document.getElementById('netlify-identity-forms');
+            netlifyIdentityForms.innerHTML = ''; 
+            window.netlifyIdentity.open('signup', { container: netlifyIdentityForms });
+        }
+    }
+
+    function checkUserStatus() {
+        if (window.netlifyIdentity) {
+            const user = netlifyIdentity.currentUser();
+            if (user) {
+                window.location.href = "equipment.html";
+            }
+        }
+    }
+
     $(document).ready(function() {
         if (window.netlifyIdentity) {
             window.netlifyIdentity.init();
         }
 
-        function checkLoggedInStatus() {
-            const user = netlifyIdentity.currentUser();
-            const isInSignupForm = $('#signup-form').has(document.activeElement).length > 0;
+        openForm();
 
-            if (!user && !isInSignupForm) {
-                netlifyIdentity.open('signup');
-            }
-        }
+        checkUserStatus();
 
-        setInterval(checkLoggedInStatus, 3000);
+        netlifyIdentity.on('signup', function(user) {
+            console.log('User signed up:', user);
+            window.location.href = "equipment.html";
+        });
 
-        function checkSignUpStatus() {
-            const user = netlifyIdentity.currentUser();
-            if (user) {
-                console.log('User is signed up:', user);
-                window.location.href = "equipment.html";
-            }
-        }
-
-        setInterval(checkSignUpStatus, 100);
+        netlifyIdentity.on('login', function(user) {
+            console.log('User logged in:', user);
+            window.location.href = "equipment.html"; 
+        });
     });
 </script>
 
